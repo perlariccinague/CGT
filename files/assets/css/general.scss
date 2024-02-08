@@ -1,0 +1,143 @@
+@import "variables";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, table, ol, ul, form {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+
+.h2-span {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+.invisible {
+  display: none;
+}
+
+.stoerer-button {
+  position: absolute;
+  top: 20vh;
+  right: 15vw;
+  z-index: 1;
+  img {
+    width: 200px;
+    transition: transform 250ms;
+    &:hover {
+      transform: rotate(14deg);
+    }
+  }
+}
+
+.sidebar {
+  position: absolute;
+  top: 11%;
+  right: 0;
+  z-index: 20;
+  transform: translateX(270px);
+  transition: transform 250ms;
+  a {
+    color: white;
+    padding: 10px 20px;
+    font: normal normal 400 30px/41px Open Sans;
+    background: $gelb;
+    position: relative;
+    text-transform: uppercase;
+    span {
+      font: normal normal 400 24px/33px Open Sans;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      width: 75px;
+      height: 75px;
+      background: url("/files/assets/layout_2024/Gruppe 145-1.svg") no-repeat;
+      top: -43px;
+      left: -11px;
+      background-size: 55px;
+      transform: rotate(-45deg);
+    }
+  }
+  &:hover {
+    transform: translateX(0px);
+  }
+}
+
+ .all-partner .sidebar {
+   top: 20%;
+ }
+
+.footer .partner-category, .partner-category {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  align-items: center;
+  .ce_image {
+    width: 24%;
+    img {
+      background: white;
+      box-shadow: 3px 3px 10px #0003;
+      width: 249px;
+      height: 136px;
+      object-fit: cover;
+    }
+  }
+  .ce_text {
+    width: 24%;
+    margin: 0;
+    p {
+      display: inline-block;
+      background-color: $gray;
+      font: normal normal bold 18px/24px Open Sans;
+      text-transform: uppercase;
+      a {
+        color: #fff;
+        padding: 10px 20px;
+        transition: background-color 250ms;
+        &:hover {
+          background-color: $gelb;
+        }
+      }
+    }
+  }
+}
+
+.partner-block, .registration-form {
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+
+.registration-form, .infos, #gallery, .advantages, .bg-image {
+  .ce_text {
+    text-align: center;
+    h2 {
+      width: 630px;
+      font: normal normal normal 40px/55px Open Sans;
+      color: $gelb;
+      border-bottom: 1px solid black;
+      padding-bottom: 10px;
+      margin: 0 auto 10px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.mobile_menu_active {
+  overflow-y: hidden;
+}

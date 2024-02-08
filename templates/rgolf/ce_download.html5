@@ -1,0 +1,7 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+<a  href="<?= $this->href ?>" title="<?= $this->title ?>"><img src="files/layout/download.svg"><br><?= $this->link ?>  </a>
+
+<?php $this->endblock(); ?>

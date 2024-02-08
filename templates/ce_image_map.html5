@@ -1,0 +1,22 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+
+  <img src="files/layout/Standort.svg" alt="" usemap="#map" itemprop="image">
+  
+    <map name="map" class="map">
+			<area id="leipzig" shape="rect" coords="358.7,264.2,428.3,279.4.8" href="{{link_url::19}}" alt="Leipzig">
+			<area id="leipzig1" shape="rect" coords="326.5,220.3,378.9,286.6" href="{{link_url::19}}" alt="Leipzig">
+			<area id="aachen" shape="rect" coords="40.8,313.2,119.7,328.4" href="{{link_url::17}}" alt="Aachen">
+			<area id="aachen1" shape="rect" coords="19,260.7,61.4,327." href="{{link_url::17}}" alt="Aachen">
+			<area id="weimar" shape="rect" coords="315.2,306.4,393.9,320.9" href="{{link_url::16}}" alt="Weimar">
+			<area id="weimar1" shape="rect" coords="278.7,268.1,321.1,334.4" href="{{link_url::16}}" alt="Weimar">
+			<area id="berlin" shape="rect" coords="394.5,199.5,459.5,214.3" href="{{link_url::18}}" alt="Berlin">
+			<area id="berlin1" shape="rect" coords="370.7,145.5,412.9,211.8" href="{{link_url::18}}" alt="Berlin">
+			<area id="schloss" shape="rect" coords="196.1,114.2,300.6,122.7" href="{{link_url::18}}" alt="schloß klingenburg">
+			<area id="schloss1" shape="rect" coords="184.2,83.2,280.4,121.2" href="{{link_url::18}}" alt="schloß klingenburg">
+			
+		</map>
+
+<?php $this->endblock(); ?>

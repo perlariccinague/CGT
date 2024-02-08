@@ -1,0 +1,22 @@
+<a class="block-link" href="<?= $this->link ?>">
+    <div class="box">
+        <img class="icon-content" src="{{file::<?= $this->icon ?>}}" alt="">
+        <img class="icon-hover" src="{{file::<?= $this->iconHover?>}}" alt="">
+        <div class="box-teaser">
+            <h3><?= $this->text  ?></h3>
+            <?php if($this->description !== ""): ?>
+              <p><?= $this->description  ?></p>
+            <?php endif; ?>
+        </div>
+    </div>
+</a>
+
+
+
+
+
+
+
+
+
+

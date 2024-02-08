@@ -1,0 +1,22 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  
+  <img src="files/content/layout/Charity_Golf_Deutschlad_neu.svg" alt="" usemap="#map-mobile" itemprop="image">
+    <map name="map-mobile">
+    		<area id="leipzig" shape="rect" coords="168.2,157.,203,165.7"  alt="Leipzig">
+			<area id="leipzig_flagge" shape="rect" coords="157.1,126.1,178.3,164.1"  alt="Leipzig">
+		  	<area id="aachen" shape="rect" coords="19.1,179.4,58.6,188.1" alt="Aachen">
+			<area id="aachen_flagge" shape="rect" coords="8.3,149.3,29.2,187.3" alt="Aachen">
+			<area id="weimar" shape="rect" coords="138.9,183.8,178.3,192.3" alt="Weimar">
+			<area id="weimar_flagge" shape="rect" coords="128.2,153.5,149.4,191.5" alt="Weimar">
+			<area id="berlin" shape="rect" coords="196.1,114.2,228.6,122.7" alt="Berlin">
+			<area id="berlin_flagge" shape="rect" coords="184.2,83.2,205.4,121.2" alt="Berlin">
+			<area id="schloß klingenburg" shape="rect" coords="106.4,216.2,147.4,236.1" alt="schloß klingenburg">
+			<area id="schloß klingenburg_flagge" shape="rect" coords="184.2,83.2,280.4,121.2" alt="schloß klingenburg">
+			
+		
+		</map>
+
+<?php $this->endblock(); ?>

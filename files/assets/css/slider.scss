@@ -1,0 +1,198 @@
+@import "variables";
+
+.ce_sliderStart {
+  position: relative;
+  width: 100%
+}
+
+.slider-wrapper img,
+.competition .slider-wrapper img {
+  height: 75vh;
+  width: 100%;
+  object-fit: cover
+}
+
+.slider-control,
+.turnier-weimar .slider-control,
+.competition .slider-control {
+  position: absolute;
+  transform: translateY(-50%);
+  width: 100%
+}
+
+.slider-control .slider-prev {
+  left: 3%;
+  width: 70px
+}
+
+.slider-control .slider-next {
+  right: 3%;
+  width: 70px
+}
+
+.slider-control .slider-menu {
+  display: none
+}
+
+.turnier-weimar .slider-control,
+.competition .slider-control {
+  top: 50%
+}
+
+.slider-control a {
+  transition: filter 250ms
+}
+
+.slider-control a:hover {
+  filter: brightness(0.65) sepia(1) saturate(350%)
+}
+
+#gallery .ce_text h2 {
+  width: 100%;
+  color: white;
+  border-color: white;
+}
+
+.button{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 35px;
+  z-index: 10;
+}
+
+.button button{
+  width: 40px;
+  border: none;
+  cursor: pointer;
+  margin: 0 20px;
+  outline: 0;
+  background: transparent;
+  transition: 0.3s;
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(76%) sepia(27%) saturate(6508%) hue-rotate(10deg) brightness(90%) contrast(100%);
+  }
+  img {
+    width: 50px;
+  }
+}
+
+
+/*#gallery {
+  position: relative;
+  .container {
+    position: relative;
+    top: 50%;
+    overflow: visible;
+    width: 100%;
+    height: auto;
+    padding: 50px 0 150px;
+    .slide {
+      display: block;
+      overflow: visible;
+      width: 31%;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      height: 100%;
+      white-space: nowrap;
+      position: relative;
+      .item {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        height: 100%;
+        white-space: normal;
+        text-align: left;
+        transition: ease 0.5s;
+        transform: translate(-50%, 0%) translate(-50%, 0);
+        img {
+          opacity: 0.5;
+          transform: scale(0.6);
+          display: inline-block;
+          max-width: 100%;
+          vertical-align: middle;
+          &.show-image {
+            opacity: 1;
+            transform: scaleX(1) scaleY(1) scaleZ(1);
+            transition: opacity 500ms ease 0s, transform 500ms ease 0s;
+          }
+          &.show-left-item {
+            transform: translatex(-100%) scale(0.6);
+            opacity: 0.5;
+          }
+          &.show-right-item {
+            transform: translatex(100%) scale(0.6);
+            opacity: 0.5;
+          }
+        }
+       !* &.show-item {
+          transform: translateX(-783px);
+          opacity: 1;
+          transition: transform 500ms ease 0s;
+        }*!
+      }
+    }
+  }
+}*/
+
+
+#gallery {
+  .container {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    .slide {
+      width: 950px;
+      height: 400px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      margin: auto;
+      .slider-inner {
+        display: flex;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+      /*  left: -320px;*/
+        left: 0;
+        .item {
+          /*float: left;
+          position: relative;*/
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 300px;
+          height: 365px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          transition: transform 500ms;
+         /* transform: translateX(0);*/
+          //transform: translate(-50%, 0%) translate(-50%, 0);
+          img {
+            width: 100%;
+            object-fit: cover;
+            min-height: 246px;
+            color: white;
+            opacity: 1;
+            transform: scale(1);
+            display: inline-block;
+            max-width: 100%;
+            &.show-image {
+              opacity: 1;
+              transform: scaleX(1) scaleY(1) scaleZ(1);
+              transition: opacity 500ms ease 0s, transform 500ms ease 0s;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+

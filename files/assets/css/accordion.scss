@@ -1,0 +1,69 @@
+@import "variables";
+
+.ce_accordionStart {
+  width: 90%;
+  max-width: $content-width;
+  margin: 25px auto;
+  background: #FFF;
+  box-shadow: 0 3px 8px #00000029;
+  .toggler {
+    position: relative;
+    padding: 15px 0;
+    color: $gelb;
+    text-align: center;
+    font: normal normal 400 22px/30px Open Sans;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0;
+    border: none;
+    .accordion-headline {
+      position: relative;
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+      transition: width 250ms ;
+      &:after {
+        width: 0;
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        height: 2px;
+        background-color: $gray;
+        transition: width 250ms;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 35px;
+      height: 35px;
+      background: url("/files/assets/layout_2024/Gruppe 148.svg") no-repeat 0/cover;
+      transition: background 250ms;
+    }
+    &.active {
+      .accordion-headline {
+        &:after {
+          width: 100%;
+        }
+      }
+      &:after {
+        background: url("/files/assets/layout_2024/accordion-active.svg") no-repeat 0/cover;
+      }
+    }
+  }
+  .ce_text {
+    padding: 30px 0 70px;
+    p {
+      font: normal normal normal 22px/30px Open Sans;
+      strong {
+        color: $gelb;
+        font-weight: 400;
+      }
+    }
+  }
+}

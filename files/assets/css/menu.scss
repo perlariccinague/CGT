@@ -1,0 +1,261 @@
+@import "variables";
+
+.mobile_menu {
+  z-index: 201;
+  .inner {
+    background: url("/files/content/Golfresort.jpg") no-repeat 0/cover;
+    position: relative;
+    overflow-y: hidden;
+    .header {
+      background: $gelb;
+      width: 100%;
+      height: 140px;
+      .link-header {
+        background: none;
+      }
+      .menu-close {
+        display: inline-block;
+        position: absolute;
+        right: 60px;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 0.6;
+      z-index: 1;
+    }
+  }
+}
+
+.menu-Navigation, .menu-bottom {
+  width: 90%;
+  max-width: $content-width;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.menu-Navigation .menu_block_wrapper {
+  .nav_right, .nav_left {
+    width: 48%;
+  }
+}
+
+.menu-Navigation {
+  padding-top: 30px;
+  margin-bottom: 35px;
+  .menu_block_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    .nav_right {
+      display: block;
+      .ce_text, .hyperlink_img {
+        position: relative;
+        img {
+          object-fit: cover;
+          height: 195px;
+          width: 100%;
+          transition: transform .3s;
+        }
+        .nav-caption {
+          background: rgba(0, 0, 0, 0.6);
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: absolute;
+          bottom: -10px;
+          width: 245px;
+          padding: 10px 0;
+          p {
+            font: normal normal 400 20px/24px Open Sans;
+            padding: 0px 10px;
+            color: white;
+            strong {
+              font: normal normal bold 30px/24px Open Sans;
+            }
+          }
+        }
+        &:last-child > .nav-caption {
+          background-color: #C99C00;
+          opacity: 0.7;
+          &:after {
+            position: absolute;
+            content: "";
+            width: 75px;
+            height: 75px;
+            background: url("/files/assets/layout_2024/Gruppe 145-1.svg") no-repeat;
+            top: -33px;
+            right: -35px;
+            background-size: 60px;
+            transform: rotate(3deg);
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+}
+
+.menu-Navigation .menu_block_wrapper .nav_right .ce_text:hover > img{
+  transform: scale(1.2);
+}
+
+
+.menu-Navigation .menu_block_wrapper {
+  .nav_left {
+    background: $gelb;
+    opacity: 0.75;
+    color: white;
+    .headline-menu {
+      text-align: center;
+      font: normal normal 800 25px/40px Open Sans;
+      text-transform: uppercase;
+      padding: 30px 0 20px;
+      h2 {
+        border-bottom: 1px solid;
+        max-width: 200px;
+        margin: 0 auto;
+        padding-bottom: 15px;
+      }
+    }
+   /* .menu-teaser {
+      display: flex;
+      justify-content: space-around;
+      .ce_text {
+        font: normal normal normal 22px/30px Open Sans;
+        text-align: right;
+        width: 45%;
+        p {
+          margin: 10px auto;
+        }
+        &:last-child {
+          border-left: 1px solid;
+          padding-left: 15px;
+          margin-left: 15px;
+          text-align: left;
+          p {
+            position: relative;
+            max-width: 100px;
+            margin: 10px 0;
+            &:after {
+              content: "";
+              position: absolute;
+              width: 15px;
+              height: 15px;
+              border: 2px solid white;
+              border-radius: 50%;
+              top: 6px;
+              right: 10px;
+            }
+          }
+        }
+      }
+    }*/
+    .ce_text {
+      display: flex;
+      justify-content: space-around;
+      font: normal normal normal 22px/40px Open Sans;
+      p {
+        text-align: right;
+        width: 45%;
+        &:last-child {
+          text-align: left;
+          border-left: 1px solid;
+          padding-left: 15px;
+          margin-left: 15px;
+          position: relative;
+          font-weight: 400;
+          &:after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border: 2px solid white;
+            border-radius: 50%;
+            top: 15px;
+            left: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-Navigation .menu_block_wrapper {
+  .nav_right {
+    .image-text {
+      margin-bottom: 35px;
+      position: relative;
+      display: block;
+      .menu-image {
+        object-fit: cover;
+        height: 195px;
+        width: 100%;
+        transition: transform 0.3s;
+      }
+      .nav_caption {
+        background: rgba(0, 0, 0, 0.6);
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        bottom: -10px;
+        width: 245px;
+        padding: 15px 0;
+        span {
+          font: normal normal 400 20px/24px Open Sans;
+          padding: 0 10px;
+          color: white;
+          strong {
+            font: normal normal bold 30px/24px Open Sans;
+          }
+        }
+      }
+    }
+    &:first-child >/*.nav_caption */{
+      background-color: #C99C00;
+      opacity: 0.7;
+      margin-bottom: 50px;
+      /*&:after {
+        position: absolute;
+        content: "";
+        width: 75px;
+        height: 75px;
+        background: url("/files/assets/layout_2024/Gruppe 145-1.svg") no-repeat;
+        top: -33px;
+        right: -35px;
+        background-size: 60px;
+        transform: rotate(3deg);
+      }*/
+    }
+  }
+}
+
+
+
+
+.menu-Navigation .menu_block_wrapper .nav_left .ce_text.click p:last-child::after {
+  background: white;
+}
+
+
+.menu-bottom {
+  border-top: 1px solid white;
+  padding-top: 20px;
+  margin-top: 15px;
+  .partner-category {
+    margin: 20px auto;
+  }
+}

@@ -1,0 +1,6 @@
+<div class="infos-box">
+    <img class="icon" src="{{file::<?= $this->image ?>}}" alt="">
+    <h3><?= $this->titel ?></h3>
+    <p><?= $this->description ?></p>
+    <div class="infos-icon"> <img src="{{file::<?= $this->icon ?>}}" alt=""></div>
+</div>

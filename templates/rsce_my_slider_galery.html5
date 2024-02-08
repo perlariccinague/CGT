@@ -1,0 +1,23 @@
+
+<div class="container">
+    <div class="slide">
+        <div class="slider-inner">
+            <?php foreach($this->slide as $key=>$slide): ?>
+                <div class="item">
+                    <img src="{{file::<?= $slide->image ?>}}">
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <div class="button">
+        <button class="prev"><img src="files/content/layout/arrow-right.svg" alt=""></button>
+        <button class="next"><img src="files/content/layout/arrow-right.svg" alt=""></button>
+    </div>
+</div>
+
+
+
+
+
+
+

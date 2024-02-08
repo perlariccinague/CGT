@@ -1,0 +1,21 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <?php if (!$this->addBefore): ?>
+    <?= $this->text ?>
+  <?php endif; ?>
+
+  <?php if ($this->addImage): ?>
+    <img src="files/content/layout/standorte.svg" alt="" usemap="#map" itemprop="image">
+    <map name="map">
+			<area id="leipzig" shape="rect" coords="359.6,270.4,418.5,283.6" href="{{link_url::19}}" alt="Leipzig">
+			
+		</map>
+  <?php endif; ?>
+
+  <?php if ($this->addBefore): ?>
+    <?= $this->text ?>
+  <?php endif; ?>
+
+<?php $this->endblock(); ?>

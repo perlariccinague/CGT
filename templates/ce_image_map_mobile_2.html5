@@ -1,0 +1,22 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  
+  <img src="files/content/layout/Charity_Golf_Deutschlad_gewinner.svg" alt="" usemap="#map-mobile" itemprop="image">
+    <map name="map-mobile">
+    		<area id="leipzig" shape="rect" coords="162.8,118.6,179.2,143.6" href="{{link_url::19}}" alt="Leipzig">
+			<area id="leipzig_text" shape="rect" coords="158.5,144.8,183.4,151.3"  alt="Leipzig">
+			<area id="weimar" shape="rect" coords="137.6,166.7,154,191.7" href="{{link_url::16}}" alt="Weimar">
+			<area id="weimar_text" shape="rect" coords="133.6,192.8,158.5,199.3" alt="Weimar">
+			<area id="berlin" shape="rect" coords="198,1.86.1,214.5,111.1" href="{{link_url::18}}" alt="Berlin">
+			<area id="berlin_text" shape="rect" coords="193.9,112.4,218.8,118.9" alt="Berlin">
+			<area id="schloß klingenburg" shape="rect" coords="125.6,262.4,142,287.4" href="{{link_url::21}}" alt="schloß klingenburg">
+			<area id="schloß klingenburg_text" shape="rect" coords="114.7,288.6,152.1,301" alt="schloß klingenburg">
+			<area id="winston" shape="rect" coords="156.5,47.3,173.6,73.0" href="{{link_url::24}}" alt="winston">
+			<area id="winston_text" shape="rect" coords="143,74.7,188.1,82.5" alt="winston">
+			
+		
+		</map>
+
+<?php $this->endblock(); ?>

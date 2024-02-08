@@ -1,0 +1,14 @@
+<?php $this->extend('form_row'); ?>
+
+<?php $this->block('field'); ?>
+  <?php if ($this->src): ?>
+    <input type="image" src="<?= $this->src ?>" id="ctrl_<?= $this->id ?>" class="submit<?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>" title="<?= Contao\StringUtil::specialchars($this->slabel) ?>" alt="<?= Contao\StringUtil::specialchars($this->slabel) ?>"<?= $this->getAttributes() ?>>
+  <?php else: ?>
+    <button type="submit"
+    class="g-recaptcha widget widget-submit" 
+        data-sitekey="6Lfrf88eAAAAAJnthY1LTSoWCoflviHNM6isRsry" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+
+  <?php endif; ?>
+<?php $this->endblock(); ?>

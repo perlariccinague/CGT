@@ -1,0 +1,210 @@
+@import "variables";
+
+.map .map-elements {
+  position: relative;
+  .map-image img {
+    width: 850px;
+    height: auto;
+  }
+}
+
+.map .map-elements {
+  .wittenbeck1, .fleesensee1, .leipzig1, .weimar1, .hösel1,
+  .schloss1, .köln1, .seddiner1, .hardenberg1, .idstein1,
+  .miltenberg1, .winston {
+    position: absolute;
+    transition: display 250ms;
+    img {
+      width: 20px;
+      position: absolute;
+    }
+    a span {
+      background: #ccb142;
+      color: #fff;
+      display: inline-block;
+      padding: 1px 6px;
+      margin: 3px auto;
+      position: absolute;
+      font: normal normal 700 11px/13px Open Sans;;
+      transition: filter 250ms;
+      &:hover {
+        filter: brightness(1.1)
+      }
+    }
+  }
+}
+
+.schloss1-white, .white {
+  display: none
+}
+
+.wittenbeck1:hover .white,
+.leipzig1:hover .white, .fleesensee1:hover .white,
+.weimar1:hover .white, .köln1:hover .white,
+.schloss1:hover .white, .seddiner1:hover .white,
+.winston:hover .white, .hardenberg1:hover .white,
+.idstein1:hover .white, .miltenberg1:hover .white,
+.hösel1:hover .white {
+  display: block
+}
+
+.map .map-elements .winston {
+  top: 67px;
+  right: 56%;
+  width: 100px;
+  height: 65px;
+  a span {
+    right: -20px;
+    background: $blue;
+  }
+  img {
+    right: 5px;
+  }
+  .white {
+    top: 6px;
+    right: 7px;
+  }
+}
+
+
+.wittenbeck1 {
+  top: 240px;
+  right: 35%;
+  width: 50px;
+  height: 60px;
+  span {
+    right: -20px;
+  }
+  img {
+    right: 5px;
+  }
+}
+
+.fleesensee1 {
+  top: 273px;
+  right: 25%;
+  width: 87px;
+  height: 58px;
+  span {
+    right: -23px;
+  }
+  img {
+    right: 10px;
+  }
+}
+
+.hösel1 {
+  top: 370px;
+  right: 57%;
+  width: 120px;
+  height: 50px;
+  span {
+    right: 20px;
+  }
+  img {
+    right: 60px;
+  }
+}
+
+.köln1 {
+  top: 422px;
+  right: 60%;
+  width: 125px;
+  height: 50px;
+  span {
+    right: 20px;
+  }
+  img {
+    right: 60px;
+  }
+}
+
+.hardenberg1 {
+  top: 435px;
+  right: 38%;
+  width: 122px;
+  height: 50px;
+  span {
+    right: 20px;
+  }
+  img {
+    right: 58px;
+  }
+}
+.idstein1 {
+  top: 542px;
+  right: 51%;
+  width: 122px;
+  height: 50px;
+  span {
+    right: 20px;
+  }
+  img {
+    right: 58px;
+  }
+}
+
+.schloss1 {
+  top: 563px;
+  right: 28%;
+  width: 150px;
+  height: 60px;
+  span {
+    right: 20px;
+  }
+  img {
+    right: 73px;
+  }
+}
+
+.miltenberg1 {
+  top: 618px;
+  right: 41%;
+  width: 126px;
+  height: 60px;
+  span {
+    right: 20px;
+  }
+  img {
+    right: 65px;
+  }
+}
+
+.seddiner1 {
+  top: 385px;
+  right: 10%;
+  width: 155px;
+  height: 50px;
+  span {
+    right: 20px;
+  }
+  img {
+    right: 70px;
+  }
+}
+
+.leipzig1 {
+  top: 459px;
+  right: 18%;
+  width: 115px;
+  height: 60px;
+  span {
+    right: 20px;
+  }
+  img {
+    right: 55px;
+  }
+}
+
+.weimar1 {
+  top: 493px;
+  right: 27%;
+  width: 120px;
+  height: 60px;
+  span {
+    right: 20px;
+  }
+  img {
+    right: 55px;
+  }
+}

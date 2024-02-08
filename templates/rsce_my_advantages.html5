@@ -1,0 +1,20 @@
+<div class="advantages-box">
+   <div class="advantages-content">
+       <img src="{{file::<?= $this->icon ?>}}" alt="">
+       <div class="advantages-teaser">
+           <p><?= $this->description  ?></p>
+       </div>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
