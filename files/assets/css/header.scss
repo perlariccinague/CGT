@@ -4,17 +4,19 @@
   position: fixed;
   width: 100%;
   z-index: 50;
-  background: none;
-  box-shadow: none;
   height: 140px;
   .inside {
     position: relative;
     height: 100%;
     .mod_mobile_menu {
-      display: inline-block;
+     /* display: inline-block;
       position: absolute;
       right: 0;
+      cursor: pointer;*/
+      display: flex;
+      position: relative;
       cursor: pointer;
+      justify-content: end;
     }
   }
 }
@@ -38,41 +40,94 @@
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   .link-header {
-    background: $gelb;
-    /* width: 824px;*/
+    background: #C99C00;
     width: 50%;
     text-align: center;
     padding: 20px 0;
-    position: absolute;
+    position: relative;
     transform: translateX(-50%);
     left: 50%;
-    top: 0;
+    top: -6px;
+    opacity: 0.8;
     a {
       color: white;
       .logo-home {
         width: 540px;
         margin: 15px auto;
         position: relative;
+        text-align: left;
+        left: 50%;
+        transform: translateX(-50%);
         &:before {
           content: "";
           background: url("/files/layout/SMG-ICON-Logo.png") no-repeat;
           background-size: 75px;
           width: 75px;
           height: 75px;
-          left: -10px;
+          left: -100px;
           position: absolute;
           top: -10px;
         }
         p {
           font: normal normal 300 18px/15px "Open sans";
-          margin-left: -165px;
         }
         h2 {
           font: normal normal 400 34px/30px "Open sans";
           margin-top: 15px;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .header {
+    width: 100%;
+    .link-header {
+      width: 100%;
+      position: relative;
+      a .logo-home {
+        padding-left: 80px;
+        p {
+          font: normal normal 300 15px/20px "Open sans";
+        }
+        h2 {
+          font: normal normal 400 20px/26px "Open sans";
+          margin-top: 0px;
+        }
+        &:before {
+          left: 0;
+          background-size: 50px;
+          width: 50px;
+          height: 50px;
+          top: -4px;
+        }
+      }
+    }
+  }
+
+  #header .inside .mod_mobile_menu {
+    justify-content: center;
+    width: 100%;
+    transform: translateY(-50%);
+    top: -8px;
+    .mobile_menu_trigger {
+      img {
+        width: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header .link-header a .logo-home {
+    left: 0;
+    transform: translateX(0%);
+    &:before {
+      left: 20px;
     }
   }
 }

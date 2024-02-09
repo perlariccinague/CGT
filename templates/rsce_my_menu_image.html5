@@ -1,10 +1,9 @@
 <a class="image-text" href="<?= $this->link ?>">
     <img class="menu-image" src="{{file::<?= $this->image ?>}}" alt="">
     <div class="nav_caption">
-        <span><?= $this->text  ?><br></span>
+        <span><?= $this->text ?><br></span>
     </div>
 </a>
-
 
 
 

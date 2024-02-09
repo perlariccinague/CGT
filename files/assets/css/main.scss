@@ -42,6 +42,7 @@
               font: normal normal 400 22px/30px Open Sans;
               strong {
                 font: normal normal 700 30px/30px Open Sans;
+                text-transform: uppercase;
               }
             }
             p {
@@ -79,7 +80,10 @@
   position: absolute;
   bottom: 25%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%, -50%);
+  width: 90%;
+  margin: 0 auto;
+  max-width: $content-width;
   .logo-home {
     color: #fff;
     text-align: center;
@@ -100,6 +104,7 @@
   .ce_text {
     max-width: 700px;
     margin: 0 auto 50px;
+    width: 80%;
     h2 {
       font: normal normal normal 30px/41px Open Sans;
       text-transform: uppercase;
@@ -119,6 +124,7 @@
   justify-content: space-between;
   max-width: 800px;
   padding-top: 20px;
+  flex-wrap: wrap;
   .location-left, .location-right {
     display: flex;
     justify-content: space-between;
@@ -230,7 +236,7 @@
   }
   .partner-category {
     .ce_image {
-      margin: 15px auto;
+      margin: 15px 0;
     }
     .ce_text {
       p {
@@ -544,6 +550,78 @@
       text-align: center;
       font: normal normal normal 22px/30px Open Sans;
       padding: 50px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #container #main .inside .header-image {
+    height: 100vh;
+    .finale-image-home .description {
+      width: 90%;
+      height: 130px;
+      .description-block {
+        .date {
+          padding-bottom: 10px;
+          width: 90%;
+          font: normal normal 400 18px/30px Open Sans;
+          strong {
+            font-size: 22px;
+          }
+        }
+        p {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+
+  .teaser-contain .logo-home {
+    h2 {
+      font: normal normal 400 26px/36px "Open sans";
+    }
+    p {
+      font: normal normal 400 18px/22px "Open sans";
+    }
+  }
+
+  .map .ce_text {
+    margin: 0 auto;
+  }
+
+  .all-location {
+    .location-left, .location-right {
+      width: 100%;
+      .ce_text {
+        width: auto;
+        text-align: center;
+        p {
+          font: normal normal normal 20px/35px Open Sans;
+        }
+      }
+      .all-date {
+        border: none;
+      }
+    }
+  }
+  .all-location .location-right .all-date {
+    padding-left: 15px;
+    margin-left: 15px;
+  }
+
+  .map, .partner {
+    margin: 50px auto;
+    .ce_text {
+      h2 {
+        font: normal normal normal 26px/36px Open Sans;
+      }
+    }
+  }
+
+  .partner-block .partner-category {
+    margin: 15px auto 50px;
+    &:not(:last-child) {
+      padding-bottom: 10px;
     }
   }
 }

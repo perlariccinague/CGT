@@ -1,6 +1,6 @@
 @import "variables";
 
-#top #footer {
+#footer {
   background: $gray;
   position: relative;
   .inside {
@@ -119,6 +119,7 @@
 #footer .footer .partner-category .ce_text, .menu-bottom .partner-category .ce_text {
   height: 136px;
   position: relative;
+  width: 249px;
   p {
     position: relative;
     transform: translate(-50%, -50%);
@@ -213,6 +214,42 @@
           font: normal normal 500 22px/34px Raleway;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #footer .inside .donation {
+    .border-radius {
+      border: 10px solid white;
+      width: 170px;
+      height: 170px;
+      background-size: 170px;
+    }
+    p {
+      font: normal normal 700 16px/22px Open Sans;
+    }
+  }
+  .footer .footer-top {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 120px 0 10px;
+    .ce_image {
+      width: auto;
+      margin: 15px auto;
+    }
+  }
+  .footer-middle {
+    padding: 20px 0;
+    .ce_text, .weatherwidget-io {
+      width: 100%;
+      margin: 15px auto;
+    }
+  }
+
+  #footer .footer .partner-category, .menu-bottom .partner-category {
+    .ce_text {
+      width: 48%;
     }
   }
 }
