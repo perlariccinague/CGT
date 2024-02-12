@@ -6,6 +6,7 @@
     <div class="logo-footer">
         <div class="link-header">
             <a href="{{link_url::2|urlattr}}" alt="">
+                {{insert_content::1195}}
                 {{insert_content::859}}
             </a>
         </div>

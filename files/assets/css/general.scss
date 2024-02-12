@@ -156,6 +156,32 @@ a {
   }
 }
 
+.link-header {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px 0;
+    .ce_image {
+      width: 100px;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    .logo-home {
+      p {
+        font: normal normal 300 18px/15px "Open sans";
+      }
+      h2 {
+        font: normal normal 400 34px/30px "Open sans";
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1025px) {
   p {
     font: normal normal normal 20px/27px Open Sans;
@@ -197,6 +223,36 @@ a {
        a{
          padding: 10px 10px;
        }
+      }
+    }
+  }
+
+  .link-header {
+    a {
+      .ce_image {
+        width: 85px;
+        img {
+          width: 65px;
+          height: 65px;
+        }
+      }
+      .logo-home {
+        p {
+          font: normal normal 300 15px/15px "Open sans";
+        }
+        h2 {
+          font: normal normal 400 20px/26px "Open sans";
+          margin-top: 9px;
+        }
+      }
+    }
+  }
+
+  .registration-form, .infos, #gallery, .advantages, .bg-image {
+    .ce_text {
+      h2 {
+        width: 90%;
+        font: normal normal normal 30px/40px Open Sans;
       }
     }
   }

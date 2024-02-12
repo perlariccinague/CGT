@@ -23,7 +23,7 @@
       margin: 0 auto;
       display: block;
       transition: width 250ms ;
-      &:after {
+ /*     &:after {
         width: 0;
         content: "";
         position: absolute;
@@ -32,7 +32,7 @@
         height: 2px;
         background-color: $gray;
         transition: width 250ms;
-      }
+      }*/
     }
     &:after {
       content: "";
@@ -64,6 +64,22 @@
         color: $gelb;
         font-weight: 400;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .ce_accordionStart {
+    .toggler {
+      font: normal normal 400 19px/30px Open Sans;
+      text-align: left;
+      &:after {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .ce_text p {
+      font: normal normal normal 20px/27px Open Sans;
     }
   }
 }

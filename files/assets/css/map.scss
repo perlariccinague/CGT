@@ -208,3 +208,21 @@
     right: 55px;
   }
 }
+
+.karte-image-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .map .map-elements {
+    display: none;
+  }
+
+  .karte-image-mobile {
+    display: block;
+    img {
+      width: 450px;
+      height: auto;
+    }
+  }
+}

@@ -59,14 +59,14 @@
 .logo-footer {
   position: relative;
   margin: 50px 0;
-  left: 50%;
-  width: 505px;
-  transform: translateX(-50%);
+ /* left: 50%;*/
+  width: 100%;
+  /*transform: translateX(-50%);*/
   .link-header {
     a {
       color: white;
-      .logo-home {
-        position: relative;
+      /*.logo-home {
+        position: relative;!*
         &:before {
           content: "";
           background: url("/files/layout/SMG-ICON-Logo.png") no-repeat;
@@ -76,15 +76,26 @@
           left: -100px;
           position: absolute;
           top: -10px;
-        }
+        }*!
         p {
           font: normal normal 300 18px/15px "Open sans";
+          position: relative;
+          &:before {
+            content: "";
+            background: url("/files/layout/SMG-ICON-Logo.png") no-repeat;
+            background-size: 75px;
+            width: 75px;
+            height: 75px;
+            left: -100px;
+            position: absolute;
+            top: -10px;
+          }
         }
         h2 {
           font: normal normal 400 34px/30px "Open sans";
           margin-top: 15px;
         }
-      }
+      }*/
     }
   }
 }
@@ -247,10 +258,38 @@
     }
   }
 
+  .footer.weimar-block .footer-middle {
+    .ce_text {
+      width: 100%;
+      margin: 15px auto;
+      text-align: center;
+      &:last-child {
+        border: 0;
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+  }
+
   #footer .footer .partner-category, .menu-bottom .partner-category {
     .ce_text {
       width: 48%;
+      p {
+        font: normal normal bold 14px/20px Open Sans;
+      }
     }
+    .ce_image {
+      margin-bottom: 10px;
+    }
+  }
+  .logo-footer {
+    margin: 20px 0;
+    border-top: 1px solid white;
+    padding-top: 20px;
+  }
+  .footer-bottom .mod_customnav ul li {
+    padding-right: 8px;
+    margin-right: 10px;
   }
 }
 

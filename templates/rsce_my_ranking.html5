@@ -1,0 +1,38 @@
+<tbody>
+  <tr>
+    <tr>
+      <div>
+          <span>Spieler</span>
+          <td><?= $this->player  ?></td>
+      </div>
+    </tr>
+    <tr>
+      <div>
+          <span>Gespielte Turniere</span>
+          <td><?= $this->played_tournaments  ?></td>
+      </div>
+     </tr>
+    <tr>
+      <div>
+          <span>Punkte</span>
+          <td><?= $this->dots  ?></td>
+      </div>
+    </tr>
+  </tr>
+</tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

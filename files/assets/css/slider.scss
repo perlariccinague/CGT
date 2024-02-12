@@ -130,11 +130,47 @@
   }
 }
 
+.mod_rocksolid_slider.mobile-only {
+  display: none;
+}
+
 @media screen and (max-width: 1025px) {
   .slider-control {
     .slider-prev, .slider-next {
       width: 50px;
     }
+  }
+}
+
+@media screen and (max-width: 870px) {
+  #gallery .container {
+    display: none;
+  }
+  .mod_rocksolid_slider.mobile-only {
+    display: block;
+   /* height: 430px;*/
+  }
+  .rsts-slide.rsts-slide-image {
+    img {
+   /*   height: 65vh !important;*/
+      object-fit: cover;
+    }
+  }
+
+  .rsts-view {
+    .rsts-skin-default .rsts-next {
+      right: 3%;
+    }
+    .rsts-prev {
+      left: 3%;
+    }
+  }
+  .rsts-skin-default .rsts-next, .rsts-prev {
+    bottom: 50% !important;
+  }
+
+  .rsts-type-slide .rsts-view {
+    cursor: pointer !important;
   }
 }
 

@@ -57,42 +57,6 @@
 }
 
 
-/*
-#progress-bar {
-  margin-bottom: 30px;
-  overflow: hidden;
-  counter-reset: step;
-}
-
-.progress-step {
-  width: 12.33%;
-  float: left;
-  position: relative;
-  &:before {
-    content: counter(step);
-    counter-increment: step;
-    width: 20px;
-    line-height: 20px;
-    display: block;
-    font-size: 10px;
-    color: #fff;
-    background: #679b9b;
-    margin: 0 auto 5px auto;
-    border-radius: 50%;
-  }
-  &:after {
-    content: "";
-    width: 100%;
-    height: 2px;
-    background: #679b9b;
-    position: absolute;
-    left: -50%;
-    top: 9px;
-    z-index: -1;
-  }
-}
-*/
-
 .formular {
   margin: 50px auto;
   .page {
@@ -111,41 +75,6 @@
     }
   }
 }
-
-/*.formular {
-  width: 100%;
-  overflow: hidden;
-  .formbody {
-    width: calc(100% *8);
-    display: flex;
-    .page {
-      width: calc(100% / 8);
-      transition: margin-left 0.3s ease-in-out;
-      .field button {
-        !*width: 100%;*!
-        height: calc(100% + 5px);
-        border: none;
-        background: crimson;
-        border-radius: 5px;
-        color: #fff;
-        cursor: pointer;
-        font-size: 18px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        transition: 0.5s ease;
-      }
-    }
-  }
-}
-
-.btns button.next {
-  margin-left: 3px;
-}
-
-.btns button.prev {
-  margin-right: 3px;
-}*/
 
 
 .formular .formbody .page{
@@ -297,6 +226,28 @@
   transition: background-color 250ms;
   &:hover {
     background-color: $gelb;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .formular .formbody .page > fieldset {
+    .widget.widget {
+      width: 100%;
+      font: normal normal normal 20px/26px Open Sans;
+      padding: 10px 0;
+    }
+    .widget.widget-text.full input {
+      padding: 10px 7px;
+      font-size: 14px;
+    }
+  }
+  .formular .formbody .page > fieldset.participant .widget.widget-text.mandatory,
+  .formular .formbody .page > fieldset.participant .widget.widget-text {
+    width: 100%;
+    input {
+      font-size: 20px;
+      padding: 10px 10px;
+    }
   }
 }
 
