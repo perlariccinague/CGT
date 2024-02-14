@@ -553,6 +553,10 @@
   }
 }
 
+.mobile-only {
+  display: none;
+}
+
 @media screen and (max-width: 1430px) {
   .content-infos .infos-box {
     max-width: 100%;
@@ -672,6 +676,40 @@
       font: normal normal normal 20px/27px Open Sans;
     }
   }
+
+  .final-round #container #main .inside .header-image .finale-image-home .description {
+    &:after {
+      width: 75px;
+      height: 75px;
+      top: -35px;
+      right: -30px;
+      background-size: 65px;
+    }
+  }
+
+  .advantages .advantages-infos .advantages-box {
+    width: 100%;
+  }
+
+  #container .bg-image {
+    height: auto;
+    .ce_text {
+      transform: translateY(0);
+      top: 0;
+      padding: 50px 0;
+      width: 90%;
+      margin: 0 auto;
+      p {
+        padding: 0;
+        font: normal normal normal 20px/27px Open Sans;
+      }
+    }
+  }
+
+  .mobile-only {
+    display: initial;
+  }
+
 }
 
 

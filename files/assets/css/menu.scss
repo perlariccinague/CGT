@@ -5,7 +5,7 @@
   .inner {
     background: url("/files/content/Golfresort.jpg") no-repeat 0/cover;
     position: relative;
-    overflow-y: hidden;
+   /* overflow-y: hidden;*/
     .header {
       background: $gelb;
       width: 100%;
@@ -20,7 +20,7 @@
       }
     }
     &:after {
-      position: absolute;
+      position: fixed;
       content: "";
       bottom: 0;
       left: 0;
@@ -160,7 +160,6 @@
       position: relative;
       display: block;
       overflow: hidden;
-     /* overflow: visible;*/
       transition: overflow 0.3s;
       .menu-image {
         object-fit: cover;
@@ -229,5 +228,39 @@
   margin-top: 15px;
   .partner-category {
     margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .mobile_menu .inner .header .menu-close {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    right: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    top: 14px;
+    img {
+      width: 55px;
+    }
+  }
+  .menu-Navigation {
+    padding-top: 0;
+    .menu_block_wrapper {
+      .nav_left, .nav_right {
+        width: 100%;
+        margin: 30px auto;
+      }
+      .nav_left {
+        padding-bottom: 20px;
+        .ce_text p {
+          &:last-child {
+            &:after {
+              top: 3px;
+            }
+          }
+        }
+      }
+    }
   }
 }

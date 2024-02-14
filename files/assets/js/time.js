@@ -11,20 +11,13 @@ if(day.toString().length === 1) {
     day = '0'+day;
 }
 let dateTime = year+'/'+month+'/'+day+' ';
-console.log(dateTime)
 
 
 time.forEach(element => {
     let lastElement = element.lastChild.previousSibling;
     let lastContent = lastElement.dataset.time;
-   /* let convertDate = Date.parse(lastContent);*/
-    console.log(lastContent);
-    /*console.log(convertDate);*/
-  /*  const passDate = new Date(convertDate);*/
-/*    console.log(dateForm)*/
     if(lastContent < dateTime) {
         element.classList.add('click');
-      /*  console.log(element);*/
     }
 })
 

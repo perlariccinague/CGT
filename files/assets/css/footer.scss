@@ -274,8 +274,13 @@
   #footer .footer .partner-category, .menu-bottom .partner-category {
     .ce_text {
       width: 48%;
+      height: 80px;
+      margin-bottom: 10px;
       p {
         font: normal normal bold 14px/20px Open Sans;
+      }
+      &:after {
+        background: url("/files/content/Sponsoren/Kukm_Logo.jpg") no-repeat center center;
       }
     }
     .ce_image {

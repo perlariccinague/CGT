@@ -73,6 +73,7 @@
     .link-header {
       width: 100%;
       position: relative;
+      top: 0;
       a .logo-home {
         p {
           font: normal normal 300 15px/20px "Open sans";
@@ -89,7 +90,7 @@
     justify-content: center;
     width: 100%;
     transform: translateY(-50%);
-    top: -8px;
+    /*top: -8px;*/
     .mobile_menu_trigger {
       img {
         width: 50px;

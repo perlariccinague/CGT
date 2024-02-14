@@ -38,6 +38,7 @@
   align-items: center;
   border: 3px solid $gelb;
   position: relative;
+  opacity: 0.5;
   &:not(:last-child) {
     &:before {
       position: absolute;
@@ -51,7 +52,16 @@
   }
 }
 
+/*.progress-step.active {
+  background-color: $gelb;
+  color: white;
+}*/
+
 .progress-step.active {
+  opacity: 1;
+}
+
+.progress-step.finish {
   background-color: $gelb;
   color: white;
 }
@@ -125,6 +135,12 @@
        width: 100%;
        padding: 10px 20px;
        box-sizing: border-box;
+       /*&.invalid-input {
+         color: red;
+       }*/
+       &.invalid {
+         background-color: #ffdddd;
+       }
      }
    }
    .widget.widget-text.mandatory {
@@ -140,6 +156,9 @@
        border: 0;
        padding: 10px 20px;
        box-sizing: border-box;
+       &.invalid-input {
+         color: red;
+       }
      }
    }
    .widget.widget-select.select {
@@ -228,6 +247,24 @@
     background-color: $gelb;
   }
 }
+
+button {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font: normal normal bold 18px/24px Open Sans;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
 
 @media screen and (max-width: 1025px) {
   .formular .formbody .page > fieldset {

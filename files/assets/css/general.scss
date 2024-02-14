@@ -76,10 +76,6 @@ a {
   }
 }
 
- .all-partner .sidebar {
-   top: 20%;
- }
-
 .footer .partner-category, .partner-category {
   display: flex;
   justify-content: space-between;
@@ -248,7 +244,8 @@ a {
     }
   }
 
-  .registration-form, .infos, #gallery, .advantages, .bg-image {
+  .registration-form, .infos, #gallery,
+  .advantages, .bg-image, .without-bg {
     .ce_text {
       h2 {
         width: 90%;

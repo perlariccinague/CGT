@@ -1,18 +1,29 @@
 
+/*
 const prevButtons = document.querySelectorAll(".btn-prev");
 const nextButtons = document.querySelectorAll(".btn-next");
 const progress = document.getElementById("progress");
 const formSteps = document.querySelectorAll(".page");
 const progressSteps = document.querySelectorAll(".progress-step");
-
+const stepsNumber = formSteps.length;
 let formStepsNum = 0;
+
+const div = document.createElement("div");
+div.classList.add('meldung')
+div.innerHTML = "test.";
+div.style.opacity = '1';
+
+console.log(div)
+
 
  function validateInputs(ths) {
         let inputsValid = true;
 
         const inputs = ths.parentElement.parentElement.querySelectorAll("input");
+       /!* console.log(inputs)*!/
         for (let i = 0; i < inputs.length; i++) {
             const valid = inputs[i].checkValidity();
+          /!*  console.log(valid);*!/
             if (!valid) {
                 inputsValid = false;
                 inputs[i].classList.add("invalid-input");
@@ -28,8 +39,11 @@ function updateFormSteps() {
     formSteps.forEach(formStep => {
         formStep.classList.contains("active") &&
         formStep.classList.remove("active");
+        formStep.appendChild(div)
     })
     formSteps[formStepsNum].classList.add("active");
+    console.log(formSteps[formStepsNum].classList.add("active"));
+  /!*  formSteps[formStepsNum].appendChild(div)*!/
 }
 
 function updateProgressBar() {
@@ -53,7 +67,6 @@ nextButtons.forEach(btn => {
         if(inputsValid) {
             updateFormSteps();
             updateProgressBar();
-            console.log("next")
         }
 
     })
@@ -62,97 +75,89 @@ nextButtons.forEach(btn => {
 prevButtons.forEach(btn => {
     btn.addEventListener("click", function () {
         formStepsNum--;
-        /*validateInputs()*/
+        /!*validateInputs()*!/
         updateFormSteps();
         updateProgressBar();
-        console.log("previous")
     })
 })
-
-
-
-
-/*const progressNumber = document.querySelectorAll(".progress-step").length;
-const slidePage = document.querySelector(".slide-page");
-const pages = document.querySelectorAll(".page");
-const nextButtons = document.querySelectorAll(".next");
-const prevButtons = document.querySelectorAll(".prev");
-const stepsNumber = pages.length;
-console.log(stepsNumber)
-
-if (progressNumber !== stepsNumber) {
-    console.warn(
-        "Error, number of steps in progress bar do not match number of pages"
-    );
-}*/
-
-/*
-
-initMultiStepForm();
-
-function initMultiStepForm() {
-    const progressNumber = document.querySelectorAll(".progress-step").length;
-    const progressbar= document.querySelectorAll(".progress-step");
-    const slidePage = document.querySelector(".slide-page");
-    const submitBtn = document.querySelector(".submit");
-    const pages = document.querySelectorAll(".page");
-    const nextButtons = document.querySelectorAll(".next");
-    const prevButtons = document.querySelectorAll(".prev");
-    const stepsNumber = pages.length;
-
-    if (progressNumber !== stepsNumber) {
-        console.warn(
-            "Error, number of steps in progress bar do not match number of pages"
-        );
-    }
-
-    document.documentElement.style.setProperty("--stepNumber", stepsNumber);
-
-    let current = 1;
-
-    for (let i = 0; i < nextButtons.length; i++) {
-        nextButtons[i].addEventListener("click", function (event) {
-            event.preventDefault();
-
-            let inputsValid = validateInputs(this);
-            // inputsValid = true;
-
-            if (inputsValid) {
-               /!* slidePage.style.marginLeft = `-${(100 / stepsNumber) * current }%`;*!/
-                slidePage.style.marginLeft = "10%";
-                progressbar[current - 1].classList.add("active")
-                current += 1;
-            }
-        });
-    }
-
-    for (let i = 0; i < prevButtons.length; i++) {
-        prevButtons[i].addEventListener("click", function (event) {
-            event.preventDefault();
-            slidePage.style.marginLeft = `-${(100 / stepsNumber) * (current - 2)}%`;
-            progressbar[current - 2].classList.remove("active")
-            current -= 1;
-        });
-    }
-
-    function validateInputs(ths) {
-        let inputsValid = true;
-
-        const inputs =
-            ths.parentElement.parentElement.querySelectorAll("input");
-        for (let i = 0; i < inputs.length; i++) {
-            const valid = inputs[i].checkValidity();
-            if (!valid) {
-                inputsValid = false;
-                inputs[i].classList.add("invalid-input");
-            } else {
-                inputs[i].classList.remove("invalid-input");
-            }
-        }
-        return inputsValid;
-    }
-}
 */
+
+let progressSteps = document.getElementsByClassName("progress-step");
+let page = document.getElementsByClassName("page");
+let submit = document.querySelector(".formular .submit");
+let radioButtons1 = document.querySelectorAll(".radio_container.mandatory")
+let currentTab = 0;
+
+
+showTab(currentTab);
+
+function showTab(index) {
+    page[index].style.display = "block";
+    if (index === 0) {
+        document.getElementById("prevBtn").style.display = "none";
+    } else {
+        document.getElementById("prevBtn").style.display = "inline";
+    }
+    if (index === (page.length-1 )) {
+        /*document.getElementById("nextBtn").innerHTML = submit.innerHTML;*/
+     /*   document.getElementById("nextBtn").style.display = "none";*/
+    } else {
+        document.getElementById("nextBtn").innerHTML = "Next";
+    }
+    fixStepIndicator(index)
+}
+
+function nextPrev(n) {
+    if (n === 1 && !validateForm()) {
+        return false;
+    }
+    page[currentTab].style.display = "none";
+    currentTab = currentTab + n;
+    showTab(currentTab);
+}
+
+function validateForm() {
+    let valid = true;
+    let currentInput= page[currentTab].getElementsByTagName("input");
+    let radioButtons = page[currentTab].getElementsByClassName("radio_container mandatory");
+
+    for (let i = 0; i < currentInput.length; i++) {
+        if (currentInput[i].value === "") {
+            currentInput[i].classList.add("invalid")
+            valid = false;
+        }
+    }
+
+    for (let i = 0; i < radioButtons.length; i++) {
+        console.log(radioButtons[i]);
+        radioButtons[i].querySelectorAll("input").forEach(element => {
+            if(!element.checked) {
+                console.log("test");
+                element.classList.add("invalid");
+                valid = false;
+            } else {
+                /*valid = true;*/
+                return valid;
+            }
+        })
+
+    }
+    if (valid) {
+        progressSteps[currentTab].classList.add("finish");
+    }
+    return valid;
+}
+
+function fixStepIndicator(n) {
+    for (let i = 0; i < progressSteps.length; i++) {
+        progressSteps[i].className = progressSteps[i].className.replace(" active", "");
+    }
+    progressSteps[n].classList.add("active")
+}
+
+
+
+
 
 
 
