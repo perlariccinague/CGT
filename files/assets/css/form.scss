@@ -38,7 +38,7 @@
   align-items: center;
   border: 3px solid $gelb;
   position: relative;
-  opacity: 0.5;
+  opacity: 1;
   &:not(:last-child) {
     &:before {
       position: absolute;
@@ -52,14 +52,14 @@
   }
 }
 
-/*.progress-step.active {
+.progress-step.active {
   background-color: $gelb;
   color: white;
-}*/
-
-.progress-step.active {
-  opacity: 1;
 }
+
+/*.progress-step.active {
+  opacity: 1;
+}*/
 
 .progress-step.finish {
   background-color: $gelb;
@@ -71,15 +71,15 @@
   margin: 50px auto;
   .page {
     display: none;
-    margin: 30px auto;
-    .title {
+  /*  margin: 30px auto;*/
+   /* .title {
       font: normal normal normal 22px/30px Open Sans;
       color: $gelb;
       text-transform: uppercase;
       border-bottom: 1px solid black;
       padding-bottom: 10px;
       margin-bottom: 30px;
-    }
+    }*/
     &.active {
       display: block;
     }
@@ -92,6 +92,7 @@
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
+   position: relative;
    .widget.widget {
      width: 49%;
      font: normal normal normal 22px/30px Open Sans;
@@ -173,7 +174,7 @@
      }
    }
    .widget.widget-explanation.explanation {
-     width: 75%;
+     width: 100%;
    }
  }
 }
@@ -223,7 +224,7 @@
  }
 
 .btn-group {
-  padding: 50px 0;
+  /*padding: 50px 0;*/
   text-align: right;
   .btn {
     margin: 0 10px;
@@ -233,7 +234,7 @@
   }
 }
 
-.btn-prev, .btn-next, .widget.widget-submit button {
+.formular .btn-prev, .formular .btn-next, .widget.widget-submit button, .formular button {
   padding: 7px 20px;
   background-color: $gray;
   font: normal normal bold 18px/24px Open Sans;
@@ -248,21 +249,77 @@
   }
 }
 
-button {
-  background-color: #04AA6D;
+/*button {
+  background-color: $gray;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
   font: normal normal bold 18px/24px Open Sans;
   cursor: pointer;
-}
+  text-transform: uppercase;
+  transition: background-color 250ms;
+}*/
 
+/*
 button:hover {
   opacity: 0.8;
 }
+*/
 
-#prevBtn {
-  background-color: #bbbbbb;
+
+.notification {
+  background: $gelb;
+  color: red;
+  padding: 10px 20px;
+  position: absolute;
+  overflow: hidden;
+/*  width: 100%;*/
+  font: italic normal 400 16px/20px Open Sans;
+  text-align: center;
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 250ms;
+  left: 0;
+  width: 50%;
+  bottom: -40px;
+}
+
+/*.formular .formbody p.error {
+  color: crimson;
+}*/
+
+.formular .formbody .page fieldset {
+  .participant-check {
+    width: 100%;
+  }
+  fieldset.participant {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    .widget.widget-text.mandatory, .widget.widget-text {
+      width: 48%;
+      input {
+        width: 100%;
+        background-color: #eeeff0;
+        border: 0;
+        padding: 10px 20px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+.formular .formbody .page > fieldset .widget.widget-explanation.explanation  {
+  h5 {
+    font: normal normal normal 22px/30px Open Sans;
+    color: $gelb;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
 }
 
 

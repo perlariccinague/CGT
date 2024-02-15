@@ -80,10 +80,14 @@
 #gallery {
   .container {
     position: relative;
-    max-width: 900px;
-    margin: auto;
+    /*max-width: 900px;
+    margin: auto;*/
+    width: 100%;
+    padding: 70px 0;
     .slide {
-      width: 950px;
+     /* width: 950px;*/
+      width: 90%;
+      max-width: 1500px;
       height: 400px;
       align-items: center;
       position: relative;
@@ -100,7 +104,8 @@
           position: absolute;
           left: 0;
           top: 0;
-          width: 300px;
+        /*  width: 300px;*/
+          width: 500px;
           height: 365px;
           overflow: hidden;
           display: flex;

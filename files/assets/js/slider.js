@@ -38,16 +38,16 @@ const showImage = () => {
         slide.style.transform = "translateX(0px) scale(1)";
 
         if(index === previousItem) {
-            slide.style.transform = "translateX(0px) scale(0.6)";
+            slide.style.transform = "translateX(0px) scale(0.7)";
             slide.style.opacity = '0.5';
             // slide.style.left = "-"+ singleItemWidth + "px)";
         } else if (index === nextItem) {
             slide.style.opacity = '0.5';
-            slide.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(0.6)";
+            slide.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(0.7)";
             // slide.style.left = + singleItemWidth + "px)";
         } else if (index === currentCount) {
             slide.style.transform = "translateX(" + singleItemWidth + "px) scale(1)";
-            slide.style.transform = "translateX(300px) scale(1)";
+            /*slide.style.transform = "translateX(400px) scale(1)";*/
             slide.style.opacity = '1';
             // slide.style.left = "(0px)";
         } else if(index > nextItem) {
@@ -72,13 +72,13 @@ const showImage = () => {
     if(currentCount === sliderAmount) {
         console.log('End');
         const doubleWidth = singleItemWidth*2;
-        slides[0].style.transform = "translateX(" + doubleWidth + "px) scale(0.6)";
+        slides[0].style.transform = "translateX(" + doubleWidth + "px) scale(0.7)";
         slides[0].style.display = "block";
         slides[0].style.opacity = "0.5";
     }
 }
 
-
+/*
 const totalMovementSize =
     parseFloat(
         document.querySelector(".item").getBoundingClientRect().width,
@@ -87,7 +87,7 @@ const totalMovementSize =
     parseFloat(
         window.getComputedStyle(carouselInner).getPropertyValue("gap"),
         10
-    );
+    );*/
 
 prev.addEventListener("click", () => {
     if(currentCount === 0) {
