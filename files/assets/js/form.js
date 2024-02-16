@@ -82,55 +82,16 @@ function validateForms() {
                 input.classList.add('invalid-input');
                 widget.parentElement.appendChild(div);
                 document.querySelector('.notification').style.opacity = '1';
-            } else if(input.value !== '') {
-               console.log(input.value);
-                input.classList.remove('invalid-input');
             }
+            input.addEventListener("input", (e)=> {
+                if(e.target.value !== "") {
+                    input.classList.remove('invalid-input');
+                }
+            });
         }
     })
     return checkOK;
 
-    /* let valid = true;
-    currentInput= page[currentTab].getElementsByTagName("input");
-    radioButtons = page[currentTab].getElementsByClassName("radio_container mandatory");
-
-    let inputsValid = true;
-    for (let i = 0; i < currentInput.length; i++) {
-        const valid = currentInput[i].checkValidity();
-        if (!valid) {
-            inputsValid = false;
-          /!*  currentInput[i].classList.add("invalid-input");*!/
-            setTimeout(function() {
-                currentInput[i].classList.add("invalid-input");
-            }, 200)
-            setTimeout(function() {
-                currentInput[i].classList.remove("invalid-input");
-            }, 3000);
-        } else {
-            currentInput[i].classList.remove("invalid-input");
-        }
-    }
-
-    for (let i = 0; i < radioButtons.length; i++) {
-        radioButtons[i].querySelectorAll("input").forEach(element => {
-            element.parentElement.appendChild(div);
-            if(!element.checked) {
-
-                /!*element.classList.add("notification");*!/
-                setTimeout(function() {
-                    document.querySelector('.notification').style.opacity = '1';
-                }, 200)
-                setTimeout(function() {
-                    document.querySelector('.notification').style.opacity = '0';
-                }, 4000);
-                valid = false;
-            } else {
-                document.querySelector('.notification').style.opacity = '0';
-            }
-        })
-    }
-
-    return inputsValid; */
 }
 
 function updateProgressBar() {

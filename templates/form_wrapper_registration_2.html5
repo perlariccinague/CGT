@@ -1,0 +1,41 @@
+
+<!-- indexer::stop -->
+<div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+
+  <?php if ($this->headline): ?>
+    <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+  <?php endif; ?>
+
+  <form<?php if ($this->action): ?> action="<?= $this->action ?>"<?php endif; ?> method="<?= $this->method ?>" enctype="<?= $this->enctype ?>"<?= $this->attributes ?><?= $this->novalidate ?>>
+  	 <div id="progress-bar">
+ 	<div class="progress" id="progress"></div>
+    <div class="progress-step"></div>
+    <div class="progress-step"></div>
+    <div class="progress-step"></div>
+    <div class="progress-step"></div>
+    <div class="progress-step"></div>
+    <div class="progress-step"></div>
+    <div class="progress-step"></div>
+    <div class="progress-step"></div>
+  </div>
+    <div class="formbody">
+      <?php if ('get' != $this->method): ?>
+        <input type="hidden" name="FORM_SUBMIT" value="<?= $this->formSubmit ?>">
+        <input type="hidden" name="REQUEST_TOKEN" value="<?= $this->requestToken ?>">
+        <?php if ($this->maxFileSize): ?>
+          <input type="hidden" name="MAX_FILE_SIZE" value="<?= $this->maxFileSize ?>">
+        <?php endif; ?>
+      <?php endif; ?>
+      <?= $this->hidden ?>
+      <?= $this->fields ?>
+    </div>
+      <div class="btn-block">
+      <div class="btn-group">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Zurück</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">weiter</button>
+    </div>
+  </div>
+  </form>
+
+</div>
+<!-- indexer::continue -->

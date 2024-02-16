@@ -15,10 +15,6 @@ const singleItemWidth = document.querySelector(".item").getBoundingClientRect().
 slides.forEach(function(slide,index) {
     // slide.style.left = -(index*singleItemWidth) + singleItemWidth + "px";
     slide.style.transform = "translateX(" + singleItemWidth + "px)";
-    /*if(index === slides.length-1) {
-        slide.style.transform = "translateX(-" + singleItemWidth + "px)";
-        slide.style.display = "block";
-    }*/
 })
 
 const showImage = () => {
@@ -47,15 +43,25 @@ const showImage = () => {
             // slide.style.left = + singleItemWidth + "px)";
         } else if (index === currentCount) {
             slide.style.transform = "translateX(" + singleItemWidth + "px) scale(1)";
-            /*slide.style.transform = "translateX(400px) scale(1)";*/
             slide.style.opacity = '1';
-            // slide.style.left = "(0px)";
         } else if(index > nextItem) {
-            slide.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(0)";
+            slide.style.transform = slide.style.transform.replace('(1)', '(0)');
+            const copy = slide.cloneNode(true);
+            copy.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(0)";
+            console.log( slide.parentElement.appendChild(copy));
+            slide.parentElement.appendChild(copy);
+            setTimeout(function (){
+                slide.parentElement.removeChild(slide);
+            },500)
         } else if(index < nextItem) {
-            slide.style.transform = "translateX(0px) scale(0)";
+            slide.style.transform = slide.style.transform.replace('(1)', '(0)')
+            const copy = slide.cloneNode(true);
+            copy.style.transform = "translateX(0px) scale(0)";
+            slide.parentElement.prepend(copy);
+            setTimeout(function (){
+                slide.parentElement.removeChild(slide);
+            },500)
         } else {
-            console.log(slide.style.transform.replace('(1)', '(0)'));
             slide.style.transform = slide.style.transform.replace('(1)', '(0)')
             //slides[sliderAmount].style.left = "-" + singleItemWidth + "px";
         }
@@ -70,7 +76,6 @@ const showImage = () => {
         //slides[sliderAmount].style.transform = "translateX(-" + singleItemWidth + "px)";
     }
     if(currentCount === sliderAmount) {
-        console.log('End');
         const doubleWidth = singleItemWidth*2;
         slides[0].style.transform = "translateX(" + doubleWidth + "px) scale(0.7)";
         slides[0].style.display = "block";
@@ -78,16 +83,6 @@ const showImage = () => {
     }
 }
 
-/*
-const totalMovementSize =
-    parseFloat(
-        document.querySelector(".item").getBoundingClientRect().width,
-        10
-    ) +
-    parseFloat(
-        window.getComputedStyle(carouselInner).getPropertyValue("gap"),
-        10
-    );*/
 
 prev.addEventListener("click", () => {
     if(currentCount === 0) {
@@ -106,7 +101,6 @@ next.addEventListener("click", () => {
    }
   showImage();
 });
-
 
 showImage(0);
 

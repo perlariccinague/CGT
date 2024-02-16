@@ -322,6 +322,11 @@ button:hover {
   }
 }
 
+.formular .formbody .page .widget.widget-submit {
+  text-align: right;
+  display: inline-block;
+}
+
 
 @media screen and (max-width: 1025px) {
   .formular .formbody .page > fieldset {
@@ -342,6 +347,10 @@ button:hover {
       font-size: 20px;
       padding: 10px 10px;
     }
+  }
+  .notification{
+    width: 90%;
+    bottom: -105px;
   }
 }
 

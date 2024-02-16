@@ -3,7 +3,7 @@
     <div class="slide">
         <div class="slider-inner">
             <?php foreach($this->slide as $key=>$slide): ?>
-                <div class="item">
+                <div class="item <?php echo $slide->id ?>">
                     <img src="{{file::<?= $slide->image ?>}}">
                 </div>
             <?php endforeach; ?>
