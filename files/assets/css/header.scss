@@ -4,7 +4,7 @@
   position: fixed;
   width: 100%;
   z-index: 50;
-  height: 140px;
+  height: 162px;
   .inside {
     position: relative;
     height: 100%;
@@ -46,7 +46,7 @@
     position: relative;
     transform: translateX(-50%);
     left: 50%;
-    top: -10px;
+    top: -12px;
     opacity: 0.8;
     a {
       .logo-home {
@@ -57,6 +57,7 @@
         h2 {
           font: normal normal 400 34px/30px "Open sans";
           margin-top: 15px;
+          text-align: left;
         }
       }
     }
@@ -66,6 +67,22 @@
 .home .link-header a {
   padding: 10px 0;
 }
+
+/*.imprint #header {
+  position: relative;
+  .header {
+    width: 100%;
+    background: $gelb;
+    .link-header {
+      background: none;
+    }
+    .mod_mobile_menu {
+      display: inline-block;
+      position: absolute;
+      right: 60px;
+    }
+  }
+}*/
 
 @media screen and (max-width: 1025px) {
   .header {

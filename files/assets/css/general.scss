@@ -72,7 +72,7 @@ a {
     }
   }
   &:hover {
-    transform: translateX(0px);
+    transform: translate(0, -50%);
   }
 }
 
@@ -87,7 +87,7 @@ a {
     img {
       background: white;
       box-shadow: 3px 3px 10px #0003;
-      width: 249px;
+     /* width: 249px;*/
       height: 136px;
       object-fit: cover;
     }
@@ -112,7 +112,7 @@ a {
   }
 }
 
-.partner-block, .registration-form {
+.partner-block, .registration-form, .privacy {
   max-width: 1080px;
   margin: 0 auto;
   width: 90%;
@@ -239,6 +239,7 @@ a {
         h2 {
           font: normal normal 400 20px/26px "Open sans";
           margin-top: 9px;
+          text-align: left;
         }
       }
     }

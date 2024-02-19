@@ -10,10 +10,11 @@
         </div>
     </div>
     <div class="button">
-        <button class="prev"><img src="files/content/layout/arrow-right.svg" alt=""></button>
+        <button class="prev"><img src="files/content/layout/arrow-left.svg" alt=""></button>
         <button class="next"><img src="files/content/layout/arrow-right.svg" alt=""></button>
     </div>
 </div>
+
 
 
 

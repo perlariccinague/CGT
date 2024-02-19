@@ -59,43 +59,11 @@
 .logo-footer {
   position: relative;
   margin: 50px 0;
- /* left: 50%;*/
   width: 100%;
-  /*transform: translateX(-50%);*/
+
   .link-header {
     a {
       color: white;
-      /*.logo-home {
-        position: relative;!*
-        &:before {
-          content: "";
-          background: url("/files/layout/SMG-ICON-Logo.png") no-repeat;
-          background-size: 75px;
-          width: 75px;
-          height: 75px;
-          left: -100px;
-          position: absolute;
-          top: -10px;
-        }*!
-        p {
-          font: normal normal 300 18px/15px "Open sans";
-          position: relative;
-          &:before {
-            content: "";
-            background: url("/files/layout/SMG-ICON-Logo.png") no-repeat;
-            background-size: 75px;
-            width: 75px;
-            height: 75px;
-            left: -100px;
-            position: absolute;
-            top: -10px;
-          }
-        }
-        h2 {
-          font: normal normal 400 34px/30px "Open sans";
-          margin-top: 15px;
-        }
-      }*/
     }
   }
 }
@@ -127,10 +95,21 @@
   }
 }
 
+.footer-middle .weatherwidget-io iframe/*#weatherwidget-io-0*/ #weatherWidget .currentWeather .currentConditions {
+  width: 30%;
+  border-left: 1px solid;
+  padding-left: 5px;
+}
+
+.footer-middle .weatherwidget-io #weatherwidget-io-0 {
+  width: 223px;
+}
+
 #footer .footer .partner-category .ce_text, .menu-bottom .partner-category .ce_text {
   height: 136px;
   position: relative;
-  width: 249px;
+/*  width: 249px;*/
+  width: 230px;
   p {
     position: relative;
     transform: translate(-50%, -50%);
@@ -160,6 +139,7 @@
     height: 100%;
     background: url("/files/content/Sponsoren/Kukm_Logo.jpg") no-repeat;
     opacity: .6;
+    background-size: 100%;
   }
 }
 
@@ -199,7 +179,7 @@
 
 .footer-bottom {
   background: rgba(0,0,0,.75);
-  mix-blend-mode: multiply;
+  /*mix-blend-mode: multiply;*/
   .mod_customnav {
     padding: 30px 0;
     ul {
@@ -210,19 +190,19 @@
         margin-right: 20px;
         font: normal normal 400 18px/24px Open Sans;
         a {
-          color: #E8E6E6;
+          color: #A9A9A9;
           position: relative;
           transition: color 250ms;
-          &:hover {
+         /* &:hover {
            color: $gelb;
-          }
+          }*/
         }
         &:not(:last-child) {
           border-right: 2px solid white;
         }
         strong {
           color: $gelb;;
-          font: normal normal 500 22px/34px Raleway;
+          font: normal normal 400 18px/24px Open Sans;
         }
       }
     }
@@ -281,6 +261,7 @@
       }
       &:after {
         background: url("/files/content/Sponsoren/Kukm_Logo.jpg") no-repeat center center;
+        background-size: 100%;
       }
     }
     .ce_image {

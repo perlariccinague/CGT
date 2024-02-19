@@ -17,7 +17,7 @@
         {{insert_content::910}}
     </div>
     {{insert_article::155}}
-    {{insert_module::31}}
+    <!--{{insert_module::31}}-->
 </div>
 <div class="footer-bottom">
     {{insert_module::32}}

@@ -313,7 +313,7 @@ button:hover {
 
 .formular .formbody .page > fieldset .widget.widget-explanation.explanation  {
   h5 {
-    font: normal normal normal 22px/30px Open Sans;
+    font: normal normal 400 22px/30px Open Sans;
     color: $gelb;
     text-transform: uppercase;
     border-bottom: 1px solid black;
@@ -327,6 +327,87 @@ button:hover {
   display: inline-block;
 }
 
+.privacy .ce_form {
+  max-width: 800px;
+  margin: 35px auto 50px;
+  padding-bottom: 75px;
+}
+
+.privacy .formbody .widget-text,
+.privacy .formbody .widget-textarea {
+  line-height: 1.5em;
+  padding-bottom: 20px;
+  label {
+    margin-bottom: 7px;
+    font: normal normal 400 22px/30px Open Sans;
+    span {
+      color: $gelb;
+    }
+  }
+  input, textarea {
+    resize: none;
+    border: 2px solid $gelb;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 10px ;
+    outline: none;
+    font: normal normal 400 22px/30px Open Sans;
+    display: block;
+    transition: background-color 250ms;
+    &:hover {
+      border:2px solid $gray;
+    }
+  }
+}
+
+.privacy .formbody .explanation {
+  font-style: italic;
+  font-size: 17px;
+  margin: 20px auto;
+}
+
+
+.privacy .widget-checkbox {
+  margin: 20px 0;
+  fieldset {
+    span {
+      input {
+        display: none;
+      }
+      label {
+        position: relative;
+        /*width: 59%;*/
+        padding-left: 35px;
+        cursor: pointer;
+        font: normal normal 400 22px/30px Open Sans;
+        a {
+          color: $gray;
+          text-transform: initial;
+          transition: color 250ms;
+          &:hover {
+            color: $gelb;
+          }
+        }
+        &:before {
+          position: absolute;
+          content: "";
+          top: 7px;
+          left: 0;
+          width: 15px;
+          height: 15px;
+          background: white;
+          font-size: 20px;
+          text-align: center;
+          border: 2px solid $gelb;
+        }
+      }
+    }
+  }
+}
+.privacy .widget-checkbox fieldset span input:checked ~ label::before {
+  background: $gelb;
+}
 
 @media screen and (max-width: 1025px) {
   .formular .formbody .page > fieldset {
