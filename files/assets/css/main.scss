@@ -67,14 +67,12 @@
   &:after {
     position: absolute;
     content: "";
-    width: 150px;
-    height: 150px;
-    background: url("/files/assets/layout_2024/Gruppe 145-1.svg") no-repeat;
-    top: -89px;
-    right: -50px;
-    background-size: 160px;
-    transform: rotate(3deg);
-    opacity: .7;
+    width: 165px;
+    height: 133px;
+    background: url("/files/assets/layout_2024/Differenzmenge 10 1.svg") no-repeat;
+    top: -101px;
+    right: -46px;
+    opacity: 0.7;
   }
 }
 
@@ -589,6 +587,10 @@
   }
 }
 
+.location {
+  display: none;
+}
+
 @media screen and (max-width: 1430px) {
   .content-infos .infos-box {
     max-width: 100%;
@@ -697,6 +699,9 @@
     width: 100%;
     max-width: 100%;
     margin-bottom: 10px;
+    h3 {
+      height: 40px;
+    }
   }
 
   .results .ce_text h2 {
@@ -723,8 +728,8 @@
     &:after {
       width: 75px;
       height: 75px;
-      top: -35px;
-      right: -30px;
+      top: -40px;
+      right: -27px;
       background-size: 65px;
     }
   }
@@ -758,6 +763,30 @@
     p {
       font: normal normal 300 20px/27px Open Sans;
     }
+  }
+
+  .location {
+    display: block;
+    .ce_text {
+      display: flex;
+      justify-content: space-around;
+      font: normal normal normal 22px/40px Open Sans;
+      p {
+        text-align: right;
+        width: 55%;
+        &:last-child {
+          width: 40%;
+          text-align: left;
+          border-left: 1px solid;
+          padding-left: 15px;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  .all-location {
+    display: none;
   }
 }
 

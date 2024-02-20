@@ -431,7 +431,22 @@ button:hover {
   }
   .notification{
     width: 90%;
-    bottom: -105px;
+    bottom: -140px;
+  }
+  .btn-block {
+    padding-top: 40px;
+  }
+
+  .progress-step:not(:last-child)::before {
+    left: 20px;
+    right: 0;
+    width: calc(12.4vw - 20px);
+  }
+}
+
+@media screen and (max-width: 450px)  {
+  .progress-step:not(:last-child)::before {
+    width: calc(11.9vw - 20px);
   }
 }
 

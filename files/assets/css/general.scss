@@ -153,12 +153,18 @@ a {
 }
 
 .link-header {
+  height: 162px;
   a {
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 20px 0;
+   /* padding: 20px 0;*/
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
     .ce_image {
       width: 100px;
       img {

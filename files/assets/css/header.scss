@@ -39,15 +39,15 @@
   justify-content: space-between;
   flex-wrap: wrap;
   .link-header {
-    background: #C99C00;
+   /* background: #C99C00;*/
+    background-color: rgba(201, 156, 0, .8);
     width: 50%;
     text-align: center;
-    padding: 20px 0;
+   /* padding: 20px 0;*/
     position: relative;
     transform: translateX(-50%);
     left: 50%;
-    top: -12px;
-    opacity: 0.8;
+ /*   top: -12px;*/
     a {
       .logo-home {
         p {

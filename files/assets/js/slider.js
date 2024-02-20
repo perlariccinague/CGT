@@ -19,48 +19,43 @@ slides.forEach(function(slide,index) {
 
 const showImage = () => {
     slides.forEach(function(slide,index) {
-        let previousItem;
-        let nextItem;
-        previousItem = currentCount-1;
-        nextItem = currentCount+1;
 
-        if(currentCount === 0) {
-            previousItem = slides.length-1;
-        } else if(currentCount === slides.length-1) {
-            nextItem = slides[0];
-        }
+
 
         slide.style.display = "block";
         slide.style.transform = "translateX(0px) scale(1)";
-
+        slide.className = 'item';
         if(index === previousItem) {
             slide.style.transform = "translateX(0px) scale(0.7)";
             slide.style.opacity = '0.5';
             // slide.style.left = "-"+ singleItemWidth + "px)";
         } else if (index === nextItem) {
+            slide.classList.add("next");
             slide.style.opacity = '0.5';
             slide.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(0.7)";
             // slide.style.left = + singleItemWidth + "px)";
         } else if (index === currentCount) {
             slide.style.transform = "translateX(" + singleItemWidth + "px) scale(1)";
             slide.style.opacity = '1';
-        } else if(index > nextItem) {
+            slide.classList.add("active");
+        } else if(index === nextNext) {
             slide.style.transform = slide.style.transform.replace('(1)', '(0)');
-            const copy = slide.cloneNode(true);
-            copy.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(0)";
-            console.log( slide.parentElement.appendChild(copy));
-            slide.parentElement.appendChild(copy);
-            setTimeout(function (){
+            // const copy = slide.cloneNode(true);
+            slide.classList.add("next-next");
+            // copy.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(0)";
+            //slide.parentElement.appendChild(copy);
+            /*setTimeout(function (){
                 slide.parentElement.removeChild(slide);
-            },500)
-        } else if(index < nextItem) {
+            },500)*/
+        } else if(index === previousPrevious) {
+            slide.classList.add("previous-previous");
             slide.style.transform = slide.style.transform.replace('(1)', '(0)')
             const copy = slide.cloneNode(true);
-            copy.style.transform = "translateX(0px) scale(0)";
+            /*copy.style.transform = "translateX(0px) scale(0)";
             slide.parentElement.prepend(copy);
             setTimeout(function (){
                 slide.parentElement.removeChild(slide);
-            },500)
+            },500)*/
         } else {
             slide.style.transform = slide.style.transform.replace('(1)', '(0)')
             //slides[sliderAmount].style.left = "-" + singleItemWidth + "px";

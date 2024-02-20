@@ -223,6 +223,10 @@
     img {
       width: 450px;
       height: auto;
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%);
+      padding: 20px 0;
     }
   }
 }

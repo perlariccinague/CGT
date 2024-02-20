@@ -103,6 +103,12 @@
 
 .footer-middle .weatherwidget-io #weatherwidget-io-0 {
   width: 223px;
+  #weatherWidget .currentConditions {
+    width: 35%;
+  }
+  .currentConditions {
+    width: 4.25rem;
+  }
 }
 
 #footer .footer .partner-category .ce_text, .menu-bottom .partner-category .ce_text {
@@ -276,6 +282,10 @@
   .footer-bottom .mod_customnav ul li {
     padding-right: 8px;
     margin-right: 10px;
+  }
+
+  .footer-middle .weatherwidget-io #weatherwidget-io-0 {
+    width: 100%;
   }
 }
 

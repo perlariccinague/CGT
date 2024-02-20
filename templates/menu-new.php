@@ -1,10 +1,13 @@
-<div class="header">
-    <div class="link-header">
-        <a href="{{link_url::2|urlattr}}">
-            {{insert_content::859}}
-        </a>
+<div class="bg-header">
+    <div class="header">
+        <div class="link-header">
+            <a href="{{link_url::2|urlattr}}">
+                {{insert_content::1195}}
+                {{insert_content::859}}
+            </a>
+        </div>
+        {{insert_module::37}}
     </div>
-    {{insert_module::37}}
 </div>
 
 
