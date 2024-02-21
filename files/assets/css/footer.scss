@@ -75,7 +75,7 @@
   padding: 50px 0;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  .ce_text, .weatherwidget-io{
+  .ce_text, .footer-middle-right{
     width: 24%;
     color: white;
     text-align: center;
@@ -95,21 +95,11 @@
   }
 }
 
-.footer-middle .weatherwidget-io iframe/*#weatherwidget-io-0*/ #weatherWidget .currentWeather .currentConditions {
-  width: 30%;
-  border-left: 1px solid;
-  padding-left: 5px;
+.footer-middle .footer-middle-right .weather {
+  width: 222px;
+  margin: 0 auto;
 }
 
-.footer-middle .weatherwidget-io #weatherwidget-io-0 {
-  width: 223px;
-  #weatherWidget .currentConditions {
-    width: 35%;
-  }
-  .currentConditions {
-    width: 4.25rem;
-  }
-}
 
 #footer .footer .partner-category .ce_text, .menu-bottom .partner-category .ce_text {
   height: 136px;
@@ -185,7 +175,6 @@
 
 .footer-bottom {
   background: rgba(0,0,0,.75);
-  /*mix-blend-mode: multiply;*/
   .mod_customnav {
     padding: 30px 0;
     ul {
@@ -199,9 +188,6 @@
           color: #A9A9A9;
           position: relative;
           transition: color 250ms;
-         /* &:hover {
-           color: $gelb;
-          }*/
         }
         &:not(:last-child) {
           border-right: 2px solid white;
@@ -238,7 +224,7 @@
   }
   .footer-middle {
     padding: 20px 0;
-    .ce_text, .weatherwidget-io {
+    .ce_text, .footer-middle-right  {
       width: 100%;
       margin: 15px auto;
     }
@@ -255,6 +241,10 @@
         text-align: center;
       }
     }
+  }
+
+  .footer-middle .footer-middle-right .weather {
+    width: 215px;
   }
 
   #footer .footer .partner-category, .menu-bottom .partner-category {
@@ -275,9 +265,9 @@
     }
   }
   .logo-footer {
-    margin: 20px 0;
+    margin: 0;
     border-top: 1px solid white;
-    padding-top: 20px;
+  /*  padding-top: 20px;*/
   }
   .footer-bottom .mod_customnav ul li {
     padding-right: 8px;

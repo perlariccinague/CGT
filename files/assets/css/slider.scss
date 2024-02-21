@@ -80,13 +80,10 @@
 #gallery {
   .container {
     position: relative;
-    /*max-width: 900px;
-    margin: auto;*/
     width: 100%;
     padding: 70px 0;
     .slide {
-     /* width: 950px;*/
-      width: 90%;
+      width: 100%;
       max-width: 1500px;
       height: 400px;
       align-items: center;
@@ -94,25 +91,19 @@
       overflow: hidden;
       margin: auto;
       .slider-inner {
-        display: flex;
         position: absolute;
-        transition: 0.3s ease-in-out;
-        left: 0;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
         .item {
-          /*float: left;
-          position: relative;*/
           position: absolute;
           left: 0;
           top: 0;
-        /*  width: 300px;*/
-          width: 500px;
-          height: 365px;
+          width: 33.3%;
           overflow: hidden;
           display: flex;
           flex-direction: column;
           transition: transform 500ms;
-         /* transform: translateX(0);*/
-          //transform: translate(-50%, 0%) translate(-50%, 0);
           img {
             width: 100%;
             object-fit: cover;
@@ -139,21 +130,6 @@
   display: none;
 }
 
-@media screen and (max-width: 1400px) {
-  #gallery {
-    .container {
-      max-width: 900px;
-      margin: auto;
-      .slide {
-        width: 1050px;
-        .slider-inner .item {
-          width: 350px;
-        }
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 1025px) {
   .slider-control {
     .slider-prev, .slider-next {
@@ -176,13 +152,27 @@
   .rsts-view {
     .rsts-skin-default .rsts-next {
       right: 3%;
+      background-image: url("/files/content/layout/arrow-right.svg") !important;
     }
     .rsts-prev {
       left: 3%;
+      background: url("/files/content/layout/arrow-left.svg") no-repeat;
+      background-size: 40px;
+      height: 43px;
+      width: 43px;
     }
+
   }
   .rsts-skin-default .rsts-next, .rsts-prev {
     bottom: 50% !important;
+    background-size: 43px;
+    height: 43px;
+    width: 43px;
+    background: url("/files/content/layout/arrow-right.svg") no-repeat;
+    transition: filter 250ms;
+    &:hover {
+      filter: brightness(0.65) sepia(1) saturate(350%);
+    }
   }
 
   .rsts-type-slide .rsts-view {

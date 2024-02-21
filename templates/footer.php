@@ -14,7 +14,11 @@
     <div class="footer-middle">
         {{insert_content::902}}
         {{insert_content::903}}
-        {{insert_content::910}}
+        <div class="footer-middle-right">
+            <div class="weather">
+                {{insert_content::910}}
+            </div>
+        </div>
     </div>
     {{insert_article::155}}
     <!--{{insert_module::31}}-->

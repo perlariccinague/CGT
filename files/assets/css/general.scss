@@ -112,7 +112,7 @@ a {
   }
 }
 
-.partner-block, .registration-form, .privacy {
+.partner-block, .registration-form, .privacy , .footer-bottom ul{
   max-width: 1080px;
   margin: 0 auto;
   width: 90%;
@@ -192,7 +192,7 @@ a {
     display: none;
   }
   .sidebar {
-    transform: translateX(200px);
+    transform: translate(200px, -50%);
     a {
       padding: 10px 10px;
       font: normal normal 400 24px/35px Open Sans;
@@ -208,6 +208,7 @@ a {
     right: auto;
     img {
       width: 80px;
+      filter: invert(54%) sepia(95%) saturate(1011%) hue-rotate(15deg);
     }
   }
 

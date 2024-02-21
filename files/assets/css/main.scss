@@ -167,8 +167,8 @@
     .all-date {
       border-right: 1px solid black;
       border-left: 0;
-      padding-left: 0px;
-      margin-left: 0px;
+      padding-left: 0;
+      margin-left: 0;
       padding-right: 15px;
       margin-right: 15px;
       p:last-child:before {
@@ -375,20 +375,26 @@
         }
       }
     }
+    &:last-child {
+      .box img {
+        margin-left: 40px;
+      }
+    }
   }
 }
 
 .infos {
   margin: 50px auto;
-  padding-bottom: 75px;
+  padding: 30px 0 75px;
 }
 
 .content-infos {
   width: 90%;
-  margin: 50px auto;
+  margin: 110px auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 1500px;
   .infos-box {
     display: block;
     width: 13.5%;
@@ -396,9 +402,7 @@
     box-sizing: border-box;
     background: #FFF;
     box-shadow: 0 3px 8px #00000029;
-   /* max-height: 366px;*/
     max-width: 220px;
-    /*padding: 10px 15px;*/
     padding: 10px 5px 0;
     .icon {
       border-bottom: 1px solid $gelb;
@@ -774,6 +778,7 @@
       p {
         text-align: right;
         width: 55%;
+        font-size: 18px;
         &:last-child {
           width: 40%;
           text-align: left;

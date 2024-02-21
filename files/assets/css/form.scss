@@ -12,19 +12,6 @@
   margin: 0 auto 30px;
 }
 
-
-/*.progress-bar::before,
-.progress {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 1px;
-  width: 100%;
-  background-color: $gelb;
-  z-index: -1;
-}*/
-
 .progress {
   display: none;
 }
@@ -57,10 +44,6 @@
   color: white;
 }
 
-/*.progress-step.active {
-  opacity: 1;
-}*/
-
 .progress-step.finish {
   background-color: $gelb;
   color: white;
@@ -71,15 +54,6 @@
   margin: 50px auto;
   .page {
     display: none;
-  /*  margin: 30px auto;*/
-   /* .title {
-      font: normal normal normal 22px/30px Open Sans;
-      color: $gelb;
-      text-transform: uppercase;
-      border-bottom: 1px solid black;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }*/
     &.active {
       display: block;
     }
@@ -136,9 +110,6 @@
        width: 100%;
        padding: 10px 20px;
        box-sizing: border-box;
-       /*&.invalid-input {
-         color: red;
-       }*/
        &.invalid {
          background-color: #ffdddd;
        }
@@ -224,8 +195,8 @@
  }
 
 .btn-group {
-  /*padding: 50px 0;*/
   text-align: right;
+  padding: 50px 0 30px;
   .btn {
     margin: 0 10px;
   }
@@ -249,31 +220,12 @@
   }
 }
 
-/*button {
-  background-color: $gray;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  font: normal normal bold 18px/24px Open Sans;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background-color 250ms;
-}*/
-
-/*
-button:hover {
-  opacity: 0.8;
-}
-*/
-
-
 .notification {
   background: $gelb;
   color: red;
   padding: 10px 20px;
   position: absolute;
   overflow: hidden;
-/*  width: 100%;*/
   font: italic normal 400 16px/20px Open Sans;
   text-align: center;
   display: inline-block;
@@ -283,10 +235,6 @@ button:hover {
   width: 50%;
   bottom: -40px;
 }
-
-/*.formular .formbody p.error {
-  color: crimson;
-}*/
 
 .formular .formbody .page fieldset {
   .participant-check {
@@ -377,7 +325,6 @@ button:hover {
       }
       label {
         position: relative;
-        /*width: 59%;*/
         padding-left: 35px;
         cursor: pointer;
         font: normal normal 400 22px/30px Open Sans;
@@ -435,6 +382,9 @@ button:hover {
   }
   .btn-block {
     padding-top: 40px;
+    .btn-group {
+      padding: 0;
+    }
   }
 
   .progress-step:not(:last-child)::before {
