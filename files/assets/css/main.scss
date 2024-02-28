@@ -171,8 +171,14 @@
       margin-left: 0;
       padding-right: 15px;
       margin-right: 15px;
-      p:last-child:before {
-        display: none;
+      p:last-child {
+        font-size: 16px;
+        text-align: center;
+        padding-right: 8px;
+        margin-top: -14px;
+        &:before {
+          display: none;
+        }
       }
     }
   }
@@ -524,7 +530,7 @@
 
 #container .bg-image {
   height: 450px;
-  background: url("/files/content/Mallorca/25773cf366cdac6f21de4f9b248fe08d646e4443.webp") no-repeat 0/cover;
+ /* background: url("/files/content/Mallorca/25773cf366cdac6f21de4f9b248fe08d646e4443.webp") no-repeat 0/cover;*/
   position: relative;
   margin: 0 auto 60px;
   &:after {
@@ -537,6 +543,7 @@
     background: black;
     opacity: 0.6;
     z-index: 20;
+    display: none;
   }
   .ce_text {
     transform: translateY(-50%);
@@ -545,10 +552,11 @@
     max-width: $content-width;
     margin: 0 auto;
     position: relative;
-    color: white;
+   /* color: white;*/
+    color: black;
     h2 {
-      border-bottom: 1px solid $gelb;
-      color: white;
+      border-bottom: 1px solid black;
+     /* color: white;*/
     }
     p {
       text-align: center;

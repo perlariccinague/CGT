@@ -57,13 +57,18 @@
     }
   }
   .ce_text {
-    padding: 30px 0 70px;
+    padding: 30px 40px 70px;
     p {
-      font: normal normal normal 22px/30px Open Sans;
+      font: normal normal normal 20px/27px Open Sans;
       strong {
         color: $gelb;
         font-weight: 400;
       }
+    }
+    li {
+      font: normal normal normal 20px/27px Open Sans;
+      list-style: inside;
+      text-align: center;
     }
   }
 }

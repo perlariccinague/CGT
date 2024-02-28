@@ -1,4 +1,4 @@
-<a class="block-link" href="<?= $this->link ?>">
+<a class="block-link" href="<?= $this->link ?>" <?php if(str_contains($this->link, 'http')): ?>target="_blank"<?php endif; ?>>
     <div class="box">
         <img class="icon-content" src="{{file::<?= $this->icon ?>}}" alt="">
         <img class="icon-hover" src="{{file::<?= $this->iconHover?>}}" alt="">
@@ -10,6 +10,8 @@
         </div>
     </div>
 </a>
+
+
 
 
 
