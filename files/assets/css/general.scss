@@ -184,6 +184,20 @@ a {
   }
 }
 
+.btn p {
+  a {
+    padding: 15px 30px;
+    background: $gelb;
+    text-transform: uppercase;
+    font: normal normal 700 18px/24px Open Sans;
+    transition: background-color 250ms;
+    color: white;
+    &:hover {
+      background-color: $gray;
+    }
+  }
+}
+
 @media screen and (max-width: 1025px) {
   p {
     font: normal normal normal 20px/27px Open Sans;

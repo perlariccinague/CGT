@@ -49,6 +49,13 @@
               font: normal normal 400 22px/30px Open Sans;
               margin: 15px 0
             }
+            a {
+              color: white;
+              transition: color 250ms;
+              &:hover {
+                color: $gelb;
+              }
+            }
           }
         }
       }
