@@ -792,7 +792,7 @@
       font: normal normal normal 22px/40px Open Sans;
       p {
         text-align: right;
-        width: 55%;
+        width: 65%;
         font-size: 18px;
         &:last-child {
           width: 40%;
@@ -800,6 +800,9 @@
           border-left: 1px solid;
           padding-left: 15px;
           margin-left: 15px;
+        }
+        a {
+          color: $gelb;
         }
       }
     }

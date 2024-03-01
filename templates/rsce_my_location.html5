@@ -1,0 +1,16 @@
+<section data-coordinates-y="<?= $this->yCoords ?>" data-coordinates-x="<?= $this->xCoords ?>" data-name="<?= $this->text ?>" class="<?php echo $this->class ?> block"<?php echo $this->cssID ?>>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
