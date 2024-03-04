@@ -672,6 +672,9 @@
 }
 
 @media screen and (max-width: 1025px) {
+  .mobile-only {
+    display: initial;
+  }
   #container #main .inside .header-image {
     height: 100vh;
     .finale-image-home .description {
@@ -865,9 +868,6 @@
 
 
 @media screen and (max-width: 430px) {
-  .mobile-only {
-    display: initial;
-  }
   .desktop-only {
     display: none;
   }
