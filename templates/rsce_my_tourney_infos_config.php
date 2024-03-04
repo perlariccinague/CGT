@@ -30,5 +30,10 @@ return array(
            'eval' => array('filesOnly' => true),
            'inputType' => 'fileTree'
        ),
+        'infos' => array(
+            'label' => array('Info', 'Beschreibung...'),
+            'eval' => array('rte' => 'tinyMCE'),
+            'inputType' => 'textarea',
+        ),
     )
 );

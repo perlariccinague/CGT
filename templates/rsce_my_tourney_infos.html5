@@ -2,5 +2,10 @@
     <img class="icon" src="{{file::<?= $this->image ?>}}" alt="">
     <h3><?= $this->titel ?></h3>
     <p><?= $this->description ?></p>
-    <div class="infos-icon"> <img src="{{file::<?= $this->icon ?>}}" alt=""></div>
+    <?php if($this->icon !==''): ?>
+       <div class="infos-icon">
+            <img src="{{file::<?= $this->icon ?>}}" alt="">
+            <div class="infos-block"><span class="infos-teaser"><?= $this->infos?></span></div>
+        </div>
+    <?php endif; ?>
 </div>

@@ -155,7 +155,7 @@
   .location-right {
     .ce_text {
       text-align: left;
-      p {
+  /*    p {
         position: relative;
         &:last-child {
           &:before {
@@ -169,7 +169,7 @@
             background-size: 20px;
           }
         }
-      }
+      }*/
     }
     .all-date {
       border-right: 1px solid black;
@@ -187,6 +187,24 @@
           display: none;
         }
       }
+    }
+  }
+}
+
+.final-teaser {
+  p {
+    max-width: 400px;
+    margin: 15px auto 0;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;;
+      background: url("/files/assets/layout_2024/Gruppe 145-1.svg") no-repeat;
+      top: -3px;
+      right: 10px;
+      background-size: 20px;
     }
   }
 }
@@ -416,7 +434,7 @@
     background: #FFF;
     box-shadow: 0 3px 8px #00000029;
     max-width: 220px;
-    padding: 10px 5px 0;
+    padding: 10px 5px;
     .icon {
       border-bottom: 1px solid $gelb;
       padding-bottom: 15px;
@@ -435,7 +453,31 @@
       font: normal normal normal 20px/27px Open Sans;
     }
     .infos-icon {
-      margin-top: 15px;
+      margin-top: 30px;
+      position: relative;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.content-infos .infos-box .infos-block {
+  position: absolute;
+  background: url("/files/assets/layout_2024/info-block.svg") top center no-repeat;
+  width: 170px;
+  height: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 35px;
+  background-size: 170px;
+  display: none;
+  .infos-teaser {
+    top: 25%;
+    position: relative;
+    p {
+      font: normal normal normal 16px/22px Open Sans;
+      color: white;
     }
   }
 }
@@ -811,11 +853,29 @@
   .all-location {
     display: none;
   }
+
+  .map .final-teaser p {
+    font-size: 18px;
+    max-width: 335px;
+    &:after {
+      right: 8px;
+    }
+  }
 }
+
 
 @media screen and (max-width: 430px) {
   .mobile-only {
     display: initial;
+  }
+}
+@media screen and (max-width: 365px) {
+  .map .final-teaser p {
+    font-size: 18px;
+    &:after {
+      right: 97px;
+      top: 26px;
+    }
   }
 }
 
