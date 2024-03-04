@@ -868,6 +868,9 @@
   .mobile-only {
     display: initial;
   }
+  .desktop-only {
+    display: none;
+  }
 }
 @media screen and (max-width: 365px) {
   .map .final-teaser p {
