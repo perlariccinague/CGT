@@ -3,7 +3,7 @@
     <h3><?= $this->titel ?></h3>
     <p><?= $this->description ?></p>
     <?php if($this->icon !==''): ?>
-       <div class="infos-icon">
+       <div class="infos-icon desktop-only">
             <img src="{{file::<?= $this->icon ?>}}" alt="">
             <div class="infos-block"><span class="infos-teaser"><?= $this->infos?></span></div>
         </div>
