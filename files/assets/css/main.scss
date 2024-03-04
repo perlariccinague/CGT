@@ -675,6 +675,9 @@
   .mobile-only {
     display: initial;
   }
+  .desktop-only {
+    display: none;
+  }
   #container #main .inside .header-image {
     height: 100vh;
     .finale-image-home .description {
@@ -866,12 +869,6 @@
   }
 }
 
-
-@media screen and (max-width: 430px) {
-  .desktop-only {
-    display: none;
-  }
-}
 @media screen and (max-width: 365px) {
   .map .final-teaser p {
     font-size: 18px;
