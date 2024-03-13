@@ -283,7 +283,7 @@ a {
     }
   }
 
- .footer .partner-category, #main .partner-category {
+ .footer .partner-category, #main .partner-category, .mobile_menu .partner-category {
     .ce_image {
       width: 48%;
       img {
@@ -347,11 +347,16 @@ a {
 }
 
 @media screen and (max-width: $smartphone) {
-  .footer .partner-category .ce_image img, #main .partner-category .ce_image {
-    width: 48%;
-    img {
-      width: 145px;
-      height: 100px;
+  .footer .partner-category, #main .partner-category, .mobile_menu .partner-category {
+    .ce_image {
+      width: 48%;
+      figure {
+        text-align: center;
+        img {
+          width: 145px;
+          height: 100px;
+        }
+      }
     }
   }
 }
