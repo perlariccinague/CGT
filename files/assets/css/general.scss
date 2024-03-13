@@ -253,7 +253,7 @@ a {
 }
 
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: $tablet) {
   .link-header {
     height: 120px;
   }
@@ -287,8 +287,8 @@ a {
     .ce_image {
       width: 48%;
       img {
-        width: 100%;
-        height: 80px;
+        width: 320px;
+        height: 195px;
       }
     }
     .ce_text {
@@ -340,5 +340,12 @@ a {
     h2 {
       font: normal normal 700 20px/30px Open Sans;
     }
+  }
+}
+
+@media screen and (max-width: $smartphone) {
+  .footer .partner-category .ce_image img, .partner-category .ce_image img {
+    width: 145px;
+    height: 100px;
   }
 }
