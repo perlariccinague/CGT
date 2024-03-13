@@ -347,13 +347,11 @@ a {
 }
 
 @media screen and (max-width: $smartphone) {
-  .footer .partner-category .ce_image img, #main .partner-category {
-    .ce_image {
-      width: 48%;
-      img {
-        width: 145px;
-        height: 100px;
-      }
+  .footer .partner-category .ce_image img, #main .partner-category .ce_image {
+    width: 48%;
+    img {
+      width: 145px;
+      height: 100px;
     }
   }
 }
