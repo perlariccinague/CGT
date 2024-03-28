@@ -120,6 +120,24 @@ submitBtn.addEventListener("click", (e) => {
     
 });
 
+const checkbox = document.querySelector(".yourBox");
+const input = document.querySelector(".formular .formbody .page > fieldset .widget.widget-text.yourText input");
+console.log(input);
+input.disabled = true;
+
+checkbox.addEventListener("click", ()=> {
+    if(checkbox.checked) {
+        input.disabled = false;
+       /* input.classList.add('active');*/
+    } else {
+        input.disabled = true;
+     /*   input.classList.remove('active');*/
+
+    }
+})
+
+
+
 
 
 

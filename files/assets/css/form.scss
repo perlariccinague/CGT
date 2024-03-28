@@ -70,7 +70,7 @@
    .widget.widget {
      width: 49%;
      font: normal normal normal 22px/30px Open Sans;
-     padding: 15px 0;
+     padding: 10px 0;
      legend {
        text-transform: uppercase;
        margin-bottom: 15px;
@@ -354,6 +354,28 @@
 }
 .privacy .widget-checkbox fieldset span input:checked ~ label::before {
   background: $gelb;
+}
+
+.formular .formbody .page > fieldset {
+  /*.widget.widget-checkbox.label-participant {
+    text-transform: uppercase;
+  }*/
+  .widget.widget-checkbox.drawn {
+    width: 100%;
+  }
+  .widget.widget-text.yourText {
+    width: 100%;
+    float: right;
+    position: absolute;
+    bottom: -8px;
+    right: -310px;
+    input {
+      background-color: #eeeff0;
+      border: 0;
+      box-sizing: border-box;
+      padding: 5px 15px;
+    }
+  }
 }
 
 @media screen and (max-width: 1025px) {
