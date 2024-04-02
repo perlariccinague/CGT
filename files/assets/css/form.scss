@@ -357,9 +357,6 @@
 }
 
 .formular .formbody .page > fieldset {
-  /*.widget.widget-checkbox.label-participant {
-    text-transform: uppercase;
-  }*/
   .widget.widget-checkbox.drawn {
     width: 100%;
   }
@@ -378,6 +375,12 @@
   }
 }
 
+.formular .formbody .page fieldset fieldset.participant.second {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 1025px) {
   .formular .formbody .page > fieldset {
     .widget.widget {
@@ -391,7 +394,9 @@
     }
   }
   .formular .formbody .page > fieldset.participant .widget.widget-text.mandatory,
-  .formular .formbody .page > fieldset.participant .widget.widget-text {
+  .formular .formbody .page > fieldset.participant .widget.widget-text,
+  .formular .formbody .page fieldset fieldset.participant .widget.widget-text.mandatory,
+  .formular .formbody .page fieldset fieldset.participant.second .widget.widget-text {
     width: 100%;
     input {
       font-size: 20px;
@@ -413,6 +418,12 @@
     left: 20px;
     right: 0;
     width: calc(12.4vw - 20px);
+  }
+  .formular .formbody .page > fieldset .widget.widget-text.yourText {
+    position: relative;
+    right: 0;
+    float: none;
+    bottom: 0;
   }
 }
 

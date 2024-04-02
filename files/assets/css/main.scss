@@ -639,6 +639,22 @@
   }
 }
 
+.image-bottom {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 760px;
+  .image_container {
+    width: 100%;
+    margin: 0 auto 50px;
+    padding-bottom: 90px;
+    img {
+      width: 100%;
+      object-fit: contain;
+      height: 100%;
+    }
+  }
+}
+
 .main-image {
   position: relative;
 }
