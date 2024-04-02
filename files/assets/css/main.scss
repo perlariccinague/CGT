@@ -251,12 +251,18 @@
 }
 .partner-block {
   padding-bottom: 60px;
+  &.partner-block-turnier {
+    max-width: 1553px;
+  }
   h2 {
     text-align: left;
     font: normal normal normal 24px/33px Open Sans;
     text-transform: uppercase;
   }
   .partner-category {
+    &.partner-category-turnier .ce_image {
+      width: 20%;
+    }
     .ce_image {
       margin: 15px 0;
     }
