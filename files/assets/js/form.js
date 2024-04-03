@@ -1,5 +1,6 @@
 const progressSteps = document.querySelectorAll(".progress-step");
 let page = document.getElementsByClassName("page");
+let pageRequirement = document.querySelector(".page .accompanying.persons");
 let submitBtn = document.querySelector(".formular .submit");
 let radioButtons1 = document.querySelectorAll(".radio_container.mandatory");
 let currentTab = 0;
@@ -7,6 +8,8 @@ const progress = document.getElementById("progress");
 let radioButtons;
 let textWidgets;
 let errors = document.querySelectorAll(".formular .formbody p.error")
+
+console.log(pageRequirement)
 
 const div = document.createElement("div");
 div.classList.add('notification')
@@ -99,9 +102,12 @@ function updateProgressBar() {
     progressSteps.forEach((progressStep, idx) => {
         if (idx < currentTab + 1) {
             progressStep.classList.add("active");
-        } else {
+        } /*else if (){
+            progressStep.classList.remove("active");
+        } */else {
             progressStep.classList.remove("active");
         }
+
     })
     const progressActive = document.querySelectorAll(".progress-step.active");
     progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + '%';
@@ -113,7 +119,6 @@ submitBtn.addEventListener("click", (e) => {
         errors.forEach(error => {
             error.style.color = "crimson";
         })
-        console.log('Error')
     } else {
         submitBtn.closest('form').submit();
     }
@@ -122,17 +127,13 @@ submitBtn.addEventListener("click", (e) => {
 
 const checkbox = document.querySelector(".yourBox");
 const input = document.querySelector(".formular .formbody .page > fieldset .widget.widget-text.yourText input");
-console.log(input);
 input.disabled = true;
 
 checkbox.addEventListener("click", ()=> {
     if(checkbox.checked) {
         input.disabled = false;
-       /* input.classList.add('active');*/
     } else {
         input.disabled = true;
-     /*   input.classList.remove('active');*/
-
     }
 })
 
