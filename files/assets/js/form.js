@@ -1,6 +1,7 @@
 const progressSteps = document.querySelectorAll(".progress-step");
 let page = document.getElementsByClassName("page");
-let pageRequirement = document.querySelector(".page .accompanying.persons");
+let accompanyingPersons= document.getElementsByClassName("accompanying-persons");
+let accompanyingPersonsNumber = document.querySelector(".accompanying-persons-number");
 let submitBtn = document.querySelector(".formular .submit");
 let radioButtons1 = document.querySelectorAll(".radio_container.mandatory");
 let currentTab = 0;
@@ -8,13 +9,16 @@ const progress = document.getElementById("progress");
 let radioButtons;
 let textWidgets;
 let errors = document.querySelectorAll(".formular .formbody p.error")
+let accompanied = true;
 
-console.log(pageRequirement)
+
 
 const div = document.createElement("div");
 div.classList.add('notification')
 div.innerHTML = "Bitte füllen Sie alle Felder die mit einem * markiert sind! ";
 div.style.opacity = '1';
+
+
 
 
 showTab(currentTab);
@@ -60,7 +64,17 @@ function nextPrev(n) {
         })
     }
     page[currentTab].style.display = "none";
-    currentTab = currentTab + n;
+    if(currentTab === 0 && accompanyingPersonsNumber.value === "0") {
+        currentTab = currentTab + n + 1;
+        accompanied = false;
+    } else if(currentTab === 0 && accompanyingPersonsNumber.value !== "0") {
+        accompanied = true;
+        currentTab = currentTab + n;
+    } else if(currentTab === 2 && accompanied === false) {
+        currentTab = currentTab + n -1;
+    } else {
+        currentTab = currentTab + n;
+    }
     showTab(currentTab);
 }
 
@@ -102,15 +116,16 @@ function updateProgressBar() {
     progressSteps.forEach((progressStep, idx) => {
         if (idx < currentTab + 1) {
             progressStep.classList.add("active");
-        } /*else if (){
-            progressStep.classList.remove("active");
-        } */else {
+        } else if (idx < currentTab + 1 ){
+            (progressStep +1).classList.add("active");
+        } else {
             progressStep.classList.remove("active");
         }
 
     })
     const progressActive = document.querySelectorAll(".progress-step.active");
     progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + '%';
+
 }
 
 submitBtn.addEventListener("click", (e) => {
@@ -136,6 +151,8 @@ checkbox.addEventListener("click", ()=> {
         input.disabled = true;
     }
 })
+
+
 
 
 
