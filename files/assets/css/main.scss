@@ -669,6 +669,14 @@
   display: none;
 }
 
+.container_text {
+  margin: 0 auto 50px;
+  width: 90%;
+  max-width: 1230px;
+  padding-bottom: 120px;
+}
+
+
 @media screen and (max-width: 1430px) {
   .content-infos .infos-box {
     max-width: 100%;
