@@ -70,10 +70,13 @@ function nextPrev(n) {
     } else if(currentTab === 0 && accompanyingPersonsNumber.value !== "0") {
         accompanied = true;
         currentTab = currentTab + n;
-    } else if(currentTab === 2 && accompanied === false) {
-        currentTab = currentTab + n -1;
+        console.log('spring zum nächsten Punkt')
+    } else if(currentTab === 2 && accompanied === false && n === -1 ) {
+        currentTab = currentTab + n - 1;
+        console.log('zurück zum vorwärts')
     } else {
         currentTab = currentTab + n;
+        console.log("nextElement")
     }
     showTab(currentTab);
 }
