@@ -32,7 +32,7 @@ a {
   position: absolute;
   top: 20vh;
   right: 15vw;
-  z-index: 1;
+  z-index: 100;
   img {
     width: 230px;
     transition: transform 250ms;
@@ -244,6 +244,28 @@ a {
       &:hover {
         background-color: transparent;
         color: white;
+      }
+    }
+  }
+}
+
+.bg-teaser, .ce_accordionStart {
+  .ce_text.booked-out h2{
+    font: normal normal normal 40px/55px Open Sans;
+  }
+  .btn-teaser {
+    margin: 30px auto;
+    display: inline-block;
+    padding-bottom: 30px;
+    a {
+      padding: 15px 30px;
+      background: #c99c00;
+      color: white;
+      text-transform: uppercase;
+      font: normal normal 700 18px/24px Open Sans;
+      transition: background-color 250ms;
+      &:hover {
+        background-color: #5C6366;
       }
     }
   }
