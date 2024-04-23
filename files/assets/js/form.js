@@ -70,13 +70,10 @@ function nextPrev(n) {
     } else if(currentTab === 0 && accompanyingPersonsNumber.value !== "0") {
         accompanied = true;
         currentTab = currentTab + n;
-        console.log('spring zum nächsten Punkt')
     } else if(currentTab === 2 && accompanied === false && n === -1 ) {
         currentTab = currentTab + n - 1;
-        console.log('zurück zum vorwärts')
     } else {
         currentTab = currentTab + n;
-        console.log("nextElement")
     }
     showTab(currentTab);
 }
@@ -145,16 +142,31 @@ submitBtn.addEventListener("click", (e) => {
 
 const checkbox = document.querySelector(".yourBox");
 const input = document.querySelector(".formular .formbody .page > fieldset .widget.widget-text.yourText input");
+const checkboxPerson = document.querySelector(".drawn.test .checkbox");
 input.disabled = true;
 
-checkbox.addEventListener("click", ()=> {
+
+
+checkbox.parentElement.addEventListener("mouseup", (ev)=> {
+    ev.preventDefault();
+    input.disabled = false;
+    checkboxPerson.checked = false;
     if(checkbox.checked) {
-        input.disabled = false;
-    } else {
+        checkbox.checked = true;
         input.disabled = true;
+    } else {
+        input.disabled = false;
     }
 })
 
+checkboxPerson.parentElement.addEventListener("mouseup", (ev)=> {
+    ev.preventDefault();
+    input.disabled = true;
+    checkbox.checked = false
+    if(checkboxPerson.checked) {
+        checkboxPerson.checked = true;
+    }
+})
 
 
 
