@@ -34,6 +34,10 @@
 
 .mobile_menu_trigger {
   display: flex;
+  img {
+    border: 3px solid white;
+    border-radius: 50%;
+  }
 }
 
 .mobile_menu .inner .bg-header {

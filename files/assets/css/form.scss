@@ -4,7 +4,7 @@
   padding: 30px 0;
 }
 
-#progress-bar {
+#progress-bar, #progress-bar-course {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -12,11 +12,11 @@
   margin: 0 auto 30px;
 }
 
-.progress {
+.progress, .progress-course {
   display: none;
 }
 
-.progress-step {
+.progress-step, .progress-step-course {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -31,15 +31,20 @@
       position: absolute;
       content: "";
       bottom: 8px;
-      right: -108px;
+      right: -161px;
       height: 2px;
-      width: 105px;
+      width: 160px;
       background: #c99c00;
     }
   }
 }
 
-.progress-step.active {
+.progress-step-course:not(:last-child)::before {
+  width: 432px;
+  right: -432px;
+}
+
+.progress-step.active, .progress-step-course.active {
   background-color: $gelb;
   color: white;
 }
@@ -50,9 +55,9 @@
 }
 
 
-.formular {
+.formular, .formular-course {
   margin: 50px auto;
-  .page {
+  .page, .page-course {
     display: none;
     &.active {
       display: block;
@@ -61,7 +66,7 @@
 }
 
 
-.formular .formbody .page{
+.formular .formbody .page, .formular-course .formbody .page-course {
  & > fieldset {
    display: flex;
    justify-content: space-between;
@@ -170,11 +175,12 @@
   }
 }
 
-.formular .formbody .page > fieldset .widget.widget span input:checked ~ label::before {
+.formular .formbody .page > fieldset .widget.widget span input:checked ~ label::before,
+.formular-course .formbody .page-course > fieldset .widget.widget span input:checked ~ label::before{
   background-color: $gelb;
 }
 
-.formular .formbody .page {
+.formular .formbody .page, .formular-course .formbody .page-course {
   fieldset.last-block {
     display: block;
     .widget.widget {
@@ -205,7 +211,8 @@
   }
 }
 
-.formular .btn-prev, .formular .btn-next, .widget.widget-submit button, .formular button {
+.formular .btn-prev, .formular .btn-next, .widget.widget-submit button,
+.formular button, .formular-course button  {
   padding: 7px 20px;
   background-color: $gray;
   font: normal normal bold 18px/24px Open Sans;
@@ -259,7 +266,8 @@
   }
 }
 
-.formular .formbody .page > fieldset .widget.widget-explanation.explanation  {
+.formular .formbody .page > fieldset .widget.widget-explanation.explanation,
+.formular-course .formbody .page-course > fieldset .widget.widget-explanation.explanation {
   h5 {
     font: normal normal 400 22px/30px Open Sans;
     color: $gelb;
@@ -417,7 +425,13 @@
   .progress-step:not(:last-child)::before {
     left: 20px;
     right: 0;
-    width: calc(12.4vw - 20px);
+    width: calc(17.4vw - 20px);
+  }
+  .progress-step-course:not(:last-child)::before {
+    left: 20px;
+    right: 0;
+    top: 11px;
+    width: calc(43.7vw - 20px);;
   }
   .formular .formbody .page > fieldset .widget.widget-text.yourText {
     position: relative;
@@ -429,7 +443,10 @@
 
 @media screen and (max-width: 450px)  {
   .progress-step:not(:last-child)::before {
-    width: calc(11.9vw - 20px);
+    width: calc(16.7vw - 20px);
+  }
+  .progress-step-course:not(:last-child)::before {
+    width: calc(42.1vw - 20px);
   }
 }
 
