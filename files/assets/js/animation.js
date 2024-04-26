@@ -19,8 +19,8 @@ gsap.to('.link-header', {
     scrollTrigger: {
         trigger: ".header-image",
         start: "bottom center",
-        end: "bottom top",
-        toggleActions: "play reserve reverse",
+        end: "bottom center",
+        toggleActions: "play none reverse none",
     },
 })
 

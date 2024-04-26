@@ -31,9 +31,9 @@
       position: absolute;
       content: "";
       bottom: 8px;
-      right: -161px;
+      right: -160px;
       height: 2px;
-      width: 160px;
+      width: 160px;;
       background: #c99c00;
     }
   }
@@ -57,6 +57,7 @@
 
 .formular, .formular-course {
   margin: 50px auto;
+  display: none;
   .page, .page-course {
     display: none;
     &.active {
@@ -387,6 +388,10 @@
   border-bottom: 1px solid black;
   padding-bottom: 10px;
   margin-bottom: 10px;
+}
+
+.formular .formbody .page .evening-event .widget.widget {
+  width: 100%;
 }
 
 @media screen and (max-width: 1025px) {

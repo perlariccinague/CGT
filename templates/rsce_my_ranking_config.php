@@ -10,24 +10,43 @@ return array(
         'type' => 'none',
     ),
     'fields' => array(
-        'player' => array(
-            'label' => array('Spieler', 'Beschreibung...'),
-            /*'eval' => array('rte' => 'tinyMCE'),*/
-            'inputType' => 'text',
-        ),
-        'played_tournaments' => array(
-            'label' => array('Gespielte Turniere', 'Beschreibung...'),
-          /*  'eval' => array('rte' => 'tinyMCE'),*/
-            'inputType' => 'text',
+        'players' => array(
+            'inputType' => 'list',
+            'label' => array('Ranking', 'Rechts auf "Neues Element" klicken'),
+            'fields' => array(
+                'player' => array(
+                    'label' => array('Spieler', 'Beschreibung...'),
+                    'inputType' => 'text',
+                     'eval' => array(
+                         'tl_class' => 'w50'
+                     )
+                ),
+                'club' => array(
+                    'label' => array('Heimatclub', 'Beschreibung...'),
+                    'inputType' => 'text',
+                    'eval' => array(
+                        'tl_class' => 'w50'
+                    )
+                ),
+                'played_tournaments' => array(
+                    'label' => array('Gespielte Turniere', 'Beschreibung...'),
+                    'inputType' => 'text',
+                    'eval' => array(
+                        'tl_class' => 'w50'
+                    )
 
-        ),
-        'dots' => array(
-            'label' => array('Punkte', 'Beschreibung...'),
-            /*'eval' => array('rte' => 'tinyMCE'),*/
-            'inputType' => 'text',
+                ),
+                'points' => array(
+                    'label' => array('Punkte', 'Beschreibung...'),
+                    'inputType' => 'text',
+                    'eval' => array(
+                        'tl_class' => 'w50'
+                    )
+                ),
 
-        ),
-    ),
+            )
+        )
+    )
 );
 
 

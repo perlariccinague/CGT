@@ -7,7 +7,6 @@ let radioButtonsCourse;
 let currentTabCourse = 0;
 let errorsCourse = document.querySelectorAll(".formular-course .formbody p.error")
 
-console.log(pageCourse);
 
 const div1 = document.createElement("div");
 div1.classList.add('notification')
@@ -15,6 +14,14 @@ div1.innerHTML = "Bitte füllen Sie alle Felder die mit einem * markiert sind! "
 div1.style.opacity = '1';
 
 
+
+document.querySelector(".btn-form-course").addEventListener("click", () => {
+    console.log('test');
+    /* history.back()*/
+    formCourse.style.display = "none";
+    btn.style.display = "block";
+    btnCourse.style.display = "block";
+})
 
 
 showTabCourse(currentTabCourse);
@@ -33,8 +40,10 @@ function showTabCourse(index) {
     pageCourse[index].style.display = "block";
     if (index === 0) {
         document.getElementById("prev").style.display = "none";
+        document.querySelector(".btn-form-course").style.display = "block";
     } else {
         document.getElementById("prev").style.display = "inline";
+        document.querySelector(".btn-form-course").style.display = "none";
     }
     if (index === (pageCourse.length-1)) {
         document.getElementById("next").style.display = "none";
@@ -106,7 +115,7 @@ function updateProgressBarCourse() {
         }
     })
     const progressActive1 = document.querySelectorAll(".progress-step-course.active");
-    progress.style.width = ((progressActive1.length - 1) / (progressSteps.length - 1)) * 100 + '%';
+    progressCourse.style.width = ((progressActive1.length - 1) / (progressSteps.length - 1)) * 100 + '%';
 
 }
 

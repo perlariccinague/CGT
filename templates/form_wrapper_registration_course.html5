@@ -29,6 +29,7 @@
       <button type="button" id="prev" onclick="nextPrevCourse(-1)">Zurück</button>
       <button type="button" id="next" onclick="nextPrevCourse(1)">weiter</button>
     </div>
+          <button type="button" class="btn-form-course">Zurück</button>
   </div>
   </form>
 

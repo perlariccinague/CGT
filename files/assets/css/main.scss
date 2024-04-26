@@ -676,6 +676,39 @@
   padding-bottom: 120px;
 }
 
+.advantages table {
+  width: 90%;
+  max-width: $content-width;
+  margin: 50px auto;
+  .th {
+    background: $gelb;
+    text-align: center;
+    color: #fff;
+    font: normal normal normal 24px/30px Open Sans;
+    text-transform: uppercase;
+    td {
+      border-left: 1px solid $gray;
+      padding: 10px 30px;
+    }
+  }
+  tr {
+    border-left: none;
+    td {
+      border: 1px solid $gray;
+      padding: 5px 30px;
+      border-bottom: none;
+      border-top: none;
+      font: normal normal normal 22px/30px Open Sans;
+      &:first-child {
+        border-left: none;
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 1430px) {
   .content-infos .infos-box {
