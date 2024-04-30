@@ -24,7 +24,7 @@ array_multisort($sortedPlayerArray, SORT_DESC, $playerArray);
     <?php $samePoints = false; ?>
     <?php $doublePlace = false; ?>
     <?php foreach($sortedPlayerArray as $index=>$player): ?>
-    <?php if($index < 30): ?>
+    <?php if($index < 108): ?>
         <?php
             if($player[0] === $latestPoints) {
                 $samePoints = true;
@@ -33,6 +33,16 @@ array_multisort($sortedPlayerArray, SORT_DESC, $playerArray);
                 }
             }
         ?>
+            <?php if($index < 30): ?>
+                <tr class="tr-best">
+                    <td><?php if($samePoints): ?><?= $index ?><?php elseif($doublePlace): ?><?= $index + 1 ?><?php else: ?><?= $index + 1 ?><?php endif; ?></td>
+                    <td><?= $player[2] ?> </td>
+                    <td><?= $player[3] ?> </td>
+                    <td><?= $player[1] ?> </td>
+                    <td><?= $player[0] ?> </td>
+
+                </tr>
+            <?php else: ?>
         <tr>
             <td><?php if($samePoints): ?><?= $index ?><?php elseif($doublePlace): ?><?= $index + 1 ?><?php else: ?><?= $index + 1 ?><?php endif; ?></td>
             <td><?= $player[2] ?> </td>
@@ -41,6 +51,7 @@ array_multisort($sortedPlayerArray, SORT_DESC, $playerArray);
             <td><?= $player[0] ?> </td>
 
         </tr>
+        <?php endif; ?>
         <?php $doublePlace = false ?>
         <?php if($samePoints === true) {
             $doublePlace = true;
@@ -50,6 +61,7 @@ array_multisort($sortedPlayerArray, SORT_DESC, $playerArray);
         <?php $latestPoints = $player[0]; ?>
         <?php $latestTournaments = $player[1]; ?>
     <?php endif; ?>
+
     <?php endforeach; ?>
     </tbody>
 </table>

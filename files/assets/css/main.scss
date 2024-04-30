@@ -678,7 +678,7 @@
 
 .advantages table {
   width: 90%;
-  max-width: $content-width;
+  max-width: 1185px;
   margin: 50px auto;
   .th {
     background: $gelb;
@@ -688,24 +688,56 @@
     text-transform: uppercase;
     td {
       border-left: 1px solid $gray;
-      padding: 10px 30px;
+     /* padding: 10px 30px;*/
+      padding: 10px 20px;
+      &:nth-child(3) {
+        padding: 10px 55px 10px 20px;
+      }
+     /* &:nth-child(4) {
+        padding: 10px 20px;
+      }*/
     }
   }
   tr {
     border-left: none;
     td {
       border: 1px solid $gray;
-      padding: 5px 30px;
+     /* padding: 5px 30px;*/
+      padding: 10px 20px;
       border-bottom: none;
       border-top: none;
       font: normal normal normal 22px/30px Open Sans;
+      /*text-align: center;*/
       &:first-child {
         border-left: none;
       }
       &:last-child {
         border-right: none;
       }
+      &:nth-child(1) {
+        padding: 10px 10px 10px 35px;
+      }
+      &:nth-child(4) {
+        text-align: right;
+      }
+      &:nth-child(3) {
+        padding: 10px 55px 10px 20px;
+      }
     }
+  }
+}
+
+.tr-best td:first-child {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: url("/files/assets/layout_2024/Gruppe 145-1.svg") no-repeat;
+    top: 15px;
+    left: 0;
+    transform: rotate(-18deg);
   }
 }
 
@@ -927,6 +959,28 @@
     &:after {
       right: 8px;
     }
+  }
+
+  .advantages table tr td {
+    padding: 10px 16px;
+    font: normal normal normal 11px/14px Open Sans;
+  }
+  .advantages table .th td {
+    padding: 5px 4px;
+  }
+  .advantages table .th td:nth-child(3) {
+    padding: 5px 4px;
+  }
+  .advantages table tr td:nth-child(1) {
+    padding: 5px 5px 5px 15px;
+  }
+  .advantages table tr td:nth-child(3) {
+    padding: 10px 10px;
+  }
+  .tr-best td:first-child::before {
+    width: 16px;
+    height: 20px;
+    top: 5px;
   }
 }
 
