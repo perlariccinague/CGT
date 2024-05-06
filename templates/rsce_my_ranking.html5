@@ -1,25 +1,70 @@
-<tbody>
-  <tr>
-    <tr>
-      <div>
-          <span>Spieler</span>
-          <td><?= $this->player  ?></td>
-      </div>
+<?php
+$playerArray = json_decode(json_encode($this->players), true);
+$sortedPlayerArray  = array();
+$points = [];
+$points = array_column($playerArray, 'points');
+$tournaments = array_column($playerArray, 'played_tournaments');
+foreach ($playerArray as $key => $row) {
+    $sortedPlayerArray[$key] = array($row['points'], $row['played_tournaments'], $row['player'], $row['club']);
+}
+array_multisort($sortedPlayerArray, SORT_DESC, $playerArray);
+?>
+
+<table>
+    <tbody>
+    <tr class="th">
+        <td></td>
+        <td>Spieler</td>
+        <td>Heimatclub</td>
+        <td>Gespielte Turniere</td>
+        <td>Punkte</td>
     </tr>
-    <tr>
-      <div>
-          <span>Gespielte Turniere</span>
-          <td><?= $this->played_tournaments  ?></td>
-      </div>
-     </tr>
-    <tr>
-      <div>
-          <span>Punkte</span>
-          <td><?= $this->dots  ?></td>
-      </div>
-    </tr>
-  </tr>
-</tbody>
+    <?php $latestPoints = 0; ?>
+    <?php $latestTournaments = 0; ?>
+    <?php $samePoints = false; ?>
+    <?php $doublePlace = false; ?>
+    <?php foreach($sortedPlayerArray as $index=>$player): ?>
+    <?php if($index < 108): ?>
+        <?php
+            if($player[0] === $latestPoints) {
+                $samePoints = true;
+                if($player[1] !== $latestTournaments) {
+                    $samePoints = false;
+                }
+            }
+        ?>
+            <?php if($index < 30): ?>
+                <tr class="tr-best">
+                    <td><?php if($samePoints): ?><?= $index ?><?php elseif($doublePlace): ?><?= $index + 1 ?><?php else: ?><?= $index + 1 ?><?php endif; ?></td>
+                    <td><?= $player[2] ?> </td>
+                    <td><?= $player[3] ?> </td>
+                    <td><?= $player[1] ?> </td>
+                    <td><?= $player[0] ?> </td>
+
+                </tr>
+            <?php else: ?>
+        <tr>
+            <td><?php if($samePoints): ?><?= $index ?><?php elseif($doublePlace): ?><?= $index + 1 ?><?php else: ?><?= $index + 1 ?><?php endif; ?></td>
+            <td><?= $player[2] ?> </td>
+            <td><?= $player[3] ?> </td>
+            <td><?= $player[1] ?> </td>
+            <td><?= $player[0] ?> </td>
+
+        </tr>
+        <?php endif; ?>
+        <?php $doublePlace = false ?>
+        <?php if($samePoints === true) {
+            $doublePlace = true;
+            $samePoints = false;
+        }
+        ?>
+        <?php $latestPoints = $player[0]; ?>
+        <?php $latestTournaments = $player[1]; ?>
+    <?php endif; ?>
+
+    <?php endforeach; ?>
+    </tbody>
+</table>
 
 
 

@@ -32,6 +32,14 @@
   }
 }
 
+.mobile_menu_trigger {
+  display: flex;
+  img {
+    border: 3px solid white;
+    border-radius: 50%;
+  }
+}
+
 .mobile_menu .inner .bg-header {
   background-color: rgba(201, 156, 0, 0.7);
   z-index: 100;

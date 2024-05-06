@@ -28,6 +28,10 @@
   }
 }
 
+.icon-partner.icon-weimar {
+  padding: 35px;
+}
+
 .header {
   z-index: 2;
   position: relative;
@@ -43,8 +47,9 @@
     width: 50%;
     text-align: center;
     position: relative;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(1);
     left: 50%;
+    transform-origin: top;
     a {
       .logo-home {
         p {
@@ -65,21 +70,6 @@
   padding: 10px 0;
 }
 
-/*.imprint #header {
-  position: relative;
-  .header {
-    width: 100%;
-    background: $gelb;
-    .link-header {
-      background: none;
-    }
-    .mod_mobile_menu {
-      display: inline-block;
-      position: absolute;
-      right: 60px;
-    }
-  }
-}*/
 
 @media screen and (max-width: 1025px) {
   #header {
