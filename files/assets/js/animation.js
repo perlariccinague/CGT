@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
     }
 })*/
 
-gsap.to('.link-header', {
+gsap.to('#header .link-header', {
     duration: 0.25,
  /*   width: "35%",*/
     scale: 0.6,

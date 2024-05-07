@@ -30,6 +30,21 @@
       z-index: 1;
     }
   }
+  .menu-social {
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    a {
+      img {
+        filter: brightness(0) invert(1);
+        transition: filter 250ms;
+      }
+      &:hover img {
+        filter: brightness(1) invert(0)
+      }
+    }
+  }
 }
 
 .mobile_menu_trigger {
@@ -211,6 +226,11 @@
           strong {
             font: normal normal bold 30px/24px Open Sans;
           }
+        }
+        .cancelled {
+          position: absolute;
+          top: -30px;
+          right: -30px;
         }
       }
       &:last-child >.nav_caption {

@@ -30,6 +30,11 @@
           color: #fff;
           background: rgba(0, 0, 0, 0.6);
           font: normal normal normal 25px/41px Open Sans;
+          .cancelled {
+            position: absolute;
+            top: -45px;
+            right: -55px;
+          }
           .description-block {
             position: relative;
             transform: translateY(-50%);
@@ -713,6 +718,7 @@
       }
       &:last-child {
         border-right: none;
+        text-align: right;
       }
       &:nth-child(1) {
         padding: 10px 10px 10px 35px;
@@ -898,6 +904,29 @@
     width: 100%;
   }
 
+  .advantages table tr td {
+    border: none;
+    font-size: 16px;
+  }
+
+  .advantages table .th td {
+    border-left: none;
+  }
+
+  .advantages table tr td {
+    padding: 11px 4px;
+    font-size: 17px;
+    &:nth-child(1) {
+      text-align: center;
+      vertical-align: middle;
+      &:before {
+        top: 50%;
+        transform: translateY(-50%) rotate(-20deg);
+      }
+    }
+  }
+
+
   #container .bg-image {
     height: auto;
     .ce_text {
@@ -963,7 +992,8 @@
 
   .advantages table tr td {
     padding: 10px 16px;
-    font: normal normal normal 11px/14px Open Sans;
+    vertical-align: middle;
+    line-height: 1.2em;
   }
   .advantages table .th td {
     padding: 5px 4px;
@@ -982,6 +1012,11 @@
     height: 20px;
     top: 5px;
   }
+
+  .advantages table tr td:last-child {
+    padding-right: 10px;
+  }
+
 }
 
 @media screen and (max-width: 365px) {
