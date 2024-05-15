@@ -341,13 +341,13 @@
 
 .advantages-infos, .block-box {
   position: relative;
-  max-width: 800px;
+  max-width: 1080px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   .block-link, .advantages-box {
-    width: 24%;
+    width: 20%;
     .box, .advantages-content {
       position: relative;
       text-align: center;
@@ -410,7 +410,7 @@
     }
     &:last-child {
       .box img {
-        margin-left: 40px;
+     /*   margin-left: 40px;*/
       }
     }
   }
@@ -419,6 +419,25 @@
 .infos {
   margin: 50px auto;
   padding: 30px 0 75px;
+}
+
+.infos-box a {
+  color: black;
+}
+
+div.infos-box:nth-child(7) {
+  background: $gelb;
+  h3 {
+    color: white;
+  }
+  .icon {
+    border-bottom: 1px solid white;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  p {
+    color: white;
+  }
 }
 
 .content-infos {
@@ -437,6 +456,7 @@
     box-shadow: 0 3px 8px #00000029;
     max-width: 220px;
     padding: 10px 5px;
+    color: black;
     .icon {
       border-bottom: 1px solid $gelb;
       padding-bottom: 15px;

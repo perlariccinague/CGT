@@ -35,5 +35,9 @@ return array(
             'eval' => array('rte' => 'tinyMCE'),
             'inputType' => 'textarea',
         ),
+        'link' => array(
+            'label' => array('Link', 'Beschreibung...'),
+            'inputType' => 'url'
+        ),
     )
 );
