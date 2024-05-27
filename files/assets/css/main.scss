@@ -440,6 +440,25 @@ div.infos-box:nth-child(7) {
   }
 }
 
+.infos-all {
+  height: 100%;
+}
+
+.final-round div.infos-box:nth-child(7) {
+  background-color: white;
+  h3 {
+    color: $gelb;
+  }
+  .icon {
+    border-bottom: 1px solid $gelb;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  p {
+    color: black;
+  }
+}
+
 .content-infos {
   width: 90%;
   margin: 110px auto;
