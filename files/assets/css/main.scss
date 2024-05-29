@@ -786,6 +786,14 @@ div.infos-box:nth-child(7) {
   }
 }
 
+.video {
+  display: flex;
+  justify-content: center;
+  margin: 80px auto;
+  width: 90%;
+  max-width: $content-width;
+}
+
 
 @media screen and (max-width: 1430px) {
   .content-infos .infos-box {
@@ -1062,6 +1070,9 @@ div.infos-box:nth-child(7) {
     }
   }
 
+  .video video {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 365px) {
