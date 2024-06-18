@@ -794,6 +794,18 @@ div.infos-box:nth-child(7) {
   max-width: $content-width;
 }
 
+.bg-teaser.without-bg {
+  .ce_player.block {
+    width: 90%;
+    margin:  0 auto;
+    max-width: $content-width;
+    padding-bottom: 30px;
+    video {
+      width: 100%;
+    }
+  }
+}
+
 
 @media screen and (max-width: 1430px) {
   .content-infos .infos-box {

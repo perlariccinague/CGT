@@ -12,7 +12,7 @@
   .wittenbeck1, .fleesensee1, .leipzig1, .weimar1, .hösel1,
   .schloss1, .köln1, .seddiner1, .hardenberg1, .idstein1,
   .miltenberg1, .winston, .berlin1, .klingenburg1,
-  .lauterhofen1, .eschberg1, .machern1 {
+  .lauterhofen1, .eschberg1, .machern1, .feldafing {
     position: absolute;
     transition: display 250ms;
     img {
@@ -48,7 +48,7 @@
 .weimar1:hover .white, .köln1:hover .white,
 .schloss1:hover .white, .seddiner1:hover .white,
 .winston:hover .white, .hardenberg1:hover .white,
-.idstein1:hover .white, .miltenberg1:hover .white,
+.idstein1:hover .white, .miltenberg1:hover .white, .feldafing:hover .white,
 .hösel1:hover .white, .berlin1:hover .white, .klingenburg1:hover .white,
 .lauterhofen1:hover .white, .eschberg1:hover .white, .machern1:hover .white {
   display: block;
@@ -248,6 +248,16 @@
   height: 60px;
   span {
     right: 12px;
+  }
+}
+
+.feldafing {
+  top: 788px;
+  right: 31%;
+  width: 146px;
+  height: 60px;
+  span {
+    right: 25px;
   }
 }
 
