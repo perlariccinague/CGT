@@ -22,6 +22,32 @@ slides.forEach(function(slide,index) {
 
 
 const showImage = () => {
+    slides = document.querySelectorAll('.item');
+    let previousItem;
+    let nextItem;
+    let previousPrevious;
+    let nextNext;
+    previousItem = currentCount-1;
+    nextItem = currentCount+1;
+
+    if(currentCount === 0) {
+        previousItem = slides.length-1;
+    } else if(currentCount === slides.length-1) {
+        nextItem = 0;
+        console.log(slides[0]);
+    }
+
+    nextNext = nextItem + 1;
+    previousPrevious = previousItem - 1;
+
+
+    if(previousItem === 0){
+        previousPrevious = slides.length-1;
+    }
+    if(nextItem === slides.length -1) {
+        nextNext = 0;
+    }
+
     slides.forEach(function(slide,index) {
         slide.style.display = "block";
         slide.style.transform = "translateX(0px) scale(1)";
@@ -30,12 +56,12 @@ const showImage = () => {
            // slide.style.transform = "translateX(0px) scale(0.7)";
             slide.style.transform = "translateX(-15%) scale(0.7)"
             slide.style.opacity = '0.5';
-            // slide.style.left = "-"+ singleItemWidth + "px)";
+            slide.classList.add("previous");
         } else if (index === nextItem) {
             slide.classList.add("next");
             slide.style.opacity = '0.5';
-            slide.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(0.7)";
-            // slide.style.left = + singleItemWidth + "px)";
+            //slide.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(0.7)";
+            slide.style.transform = "translateX(" + doubleOffset + "px) scale(0.7)";
         } else if (index === currentCount) {
             //slide.style.transform = "translateX(" + singleItemWidth + "px) scale(1)";
             slide.style.transform = "translateX(" + offset + "px) scale(1)";
@@ -45,22 +71,10 @@ const showImage = () => {
            //slide.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(1)";
             slide.style.transform = "translateX(" + doubleOffset + "px) scale(1)";
             slide.style.transform = slide.style.transform.replace('(1)', '(0)');
-            // const copy = slide.cloneNode(true);
             slide.classList.add("next-next");
-            // copy.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(0)";
-            //slide.parentElement.appendChild(copy);
-            /*setTimeout(function (){
-                slide.parentElement.removeChild(slide);
-            },500)*/
         } else if(index === previousPrevious) {
             slide.classList.add("previous-previous");
             slide.style.transform = slide.style.transform.replace('(1)', '(0)')
-            const copy = slide.cloneNode(true);
-            /*copy.style.transform = "translateX(0px) scale(0)";
-            slide.parentElement.prepend(copy);
-            setTimeout(function (){
-                slide.parentElement.removeChild(slide);
-            },500)*/
         } else {
             slide.style.transform = slide.style.transform.replace('(1)', '(0)')
         }
