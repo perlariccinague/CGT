@@ -2,22 +2,18 @@ const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 let slides = document.querySelectorAll('.item');
 const sliderAmount = slides.length-1;
-let currentCount = 0;
 const singleItemWidth = document.querySelector(".item").getBoundingClientRect().width;
-console.log(singleItemWidth)
-
-const differenceWidth = singleItemWidth - document.querySelector('.item').getBoundingClientRect().width
-const offset1 = differenceWidth / 2
-console.log(differenceWidth)
-
-const offset = singleItemWidth -(singleItemWidth * 0.15)
-const doubleOffset =  singleItemWidth * 2  - (singleItemWidth  * 0.15)
-const doubleOffset1 =  singleItemWidth * 2 + singleItemWidth *0.3 - (singleItemWidth *2 *0.15 + (singleItemWidth * 0.15))
+const wrapper = document.querySelector('.slide')
+const wrapperWidth = wrapper.getBoundingClientRect().width
+console.log(wrapperWidth);
+const singleStandardWidth = wrapperWidth / 3
+const differenceWidth = singleItemWidth - singleStandardWidth
+const doubleOffset =  singleStandardWidth * 2  - differenceWidth
+let currentCount = 0;
 
 
 slides.forEach(function(slide,index) {
     slide.style.transform = "translateX(" + singleItemWidth  + "px)";
-    //slide.style.transform = "translateX(" + singleItemWidth - (singleItemWidth * 0.15 ) + "px)";
 })
 
 
@@ -53,18 +49,15 @@ const showImage = () => {
         slide.style.transform = "translateX(0px) scale(1)";
         slide.className = 'item';
         if(index === previousItem) {
-           // slide.style.transform = "translateX(0px) scale(0.7)";
-            slide.style.transform = "translateX(-15%) scale(0.7)"
+            slide.style.transform = "translateX(0) scale(0.7)"
             slide.style.opacity = '0.5';
             slide.classList.add("previous");
         } else if (index === nextItem) {
             slide.classList.add("next");
             slide.style.opacity = '0.5';
-            //slide.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(0.7)";
             slide.style.transform = "translateX(" + doubleOffset + "px) scale(0.7)";
         } else if (index === currentCount) {
-            //slide.style.transform = "translateX(" + singleItemWidth + "px) scale(1)";
-            slide.style.transform = "translateX(" + offset + "px) scale(1)";
+            slide.style.transform = "translateX(" + singleStandardWidth + "px) scale(1)";
             slide.style.opacity = '1';
             slide.classList.add("active");
         } else if(index === nextNext) {
@@ -105,6 +98,10 @@ next.addEventListener("click", () => {
    }
   showImage();
 });
+
+window.addEventListener('resize', function() {
+    console.log('Resizing')
+})
 
 showImage(0);
 
