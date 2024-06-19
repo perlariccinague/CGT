@@ -2,23 +2,17 @@ const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 let slides = document.querySelectorAll('.item');
 const sliderAmount = slides.length-1;
-const singleItemWidth = document.querySelector(".item").getBoundingClientRect().width;
-const wrapper = document.querySelector('.slide')
-const wrapperWidth = wrapper.getBoundingClientRect().width
-console.log(wrapperWidth);
-const singleStandardWidth = wrapperWidth / 3
-const differenceWidth = singleItemWidth - singleStandardWidth
-const doubleOffset =  singleStandardWidth * 2  - differenceWidth
 let currentCount = 0;
 
 
-slides.forEach(function(slide,index) {
-    slide.style.transform = "translateX(" + singleItemWidth  + "px)";
-})
-
+const singleItemWidth = document.querySelector(".item").getBoundingClientRect().width;
+const wrapper = document.querySelector('.slide')
+const wrapperWidth = wrapper.getBoundingClientRect().width
+const singleStandardWidth = wrapperWidth / 3
+const differenceWidth = singleItemWidth - singleStandardWidth
+const doubleOffset =  singleStandardWidth * 2  - differenceWidth
 
 const showImage = () => {
-    slides = document.querySelectorAll('.item');
     let previousItem;
     let nextItem;
     let previousPrevious;
@@ -103,7 +97,7 @@ window.addEventListener('resize', function() {
     console.log('Resizing')
 })
 
-showImage(0);
+showImage();
 
 
 
