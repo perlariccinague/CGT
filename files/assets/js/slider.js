@@ -11,8 +11,8 @@ const offset1 = differenceWidth / 2
 console.log(differenceWidth)
 
 const offset = singleItemWidth -(singleItemWidth * 0.15)
-const doubleOffset =  singleItemWidth * 2 - (singleItemWidth * 0.15)
-
+const doubleOffset =  singleItemWidth * 2  - (singleItemWidth  * 0.15)
+const doubleOffset1 =  singleItemWidth * 2 + singleItemWidth *0.3 - (singleItemWidth *2 *0.15 + (singleItemWidth * 0.15))
 
 
 slides.forEach(function(slide,index) {
