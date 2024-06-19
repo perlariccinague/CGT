@@ -4,9 +4,20 @@ let slides = document.querySelectorAll('.item');
 const sliderAmount = slides.length-1;
 let currentCount = 0;
 const singleItemWidth = document.querySelector(".item").getBoundingClientRect().width;
+console.log(singleItemWidth)
+
+const differenceWidth = singleItemWidth - document.querySelector('.item').getBoundingClientRect().width
+const offset1 = differenceWidth / 2
+console.log(differenceWidth)
+
+const offset = singleItemWidth -(singleItemWidth * 0.15)
+const doubleOffset =  singleItemWidth * 2 - (singleItemWidth * 0.15)
+
+
 
 slides.forEach(function(slide,index) {
-    slide.style.transform = "translateX(" + singleItemWidth + "px)";
+    slide.style.transform = "translateX(" + singleItemWidth  + "px)";
+    //slide.style.transform = "translateX(" + singleItemWidth - (singleItemWidth * 0.15 ) + "px)";
 })
 
 
@@ -16,7 +27,8 @@ const showImage = () => {
         slide.style.transform = "translateX(0px) scale(1)";
         slide.className = 'item';
         if(index === previousItem) {
-            slide.style.transform = "translateX(0px) scale(0.7)";
+           // slide.style.transform = "translateX(0px) scale(0.7)";
+            slide.style.transform = "translateX(-15%) scale(0.7)"
             slide.style.opacity = '0.5';
             // slide.style.left = "-"+ singleItemWidth + "px)";
         } else if (index === nextItem) {
@@ -25,11 +37,13 @@ const showImage = () => {
             slide.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(0.7)";
             // slide.style.left = + singleItemWidth + "px)";
         } else if (index === currentCount) {
-            slide.style.transform = "translateX(" + singleItemWidth + "px) scale(1)";
+            //slide.style.transform = "translateX(" + singleItemWidth + "px) scale(1)";
+            slide.style.transform = "translateX(" + offset + "px) scale(1)";
             slide.style.opacity = '1';
             slide.classList.add("active");
         } else if(index === nextNext) {
-            slide.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(1)";
+           //slide.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(1)";
+            slide.style.transform = "translateX(" + doubleOffset + "px) scale(1)";
             slide.style.transform = slide.style.transform.replace('(1)', '(0)');
             // const copy = slide.cloneNode(true);
             slide.classList.add("next-next");
