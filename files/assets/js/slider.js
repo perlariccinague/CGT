@@ -3,16 +3,15 @@ const next = document.querySelector(".next");
 let slides = document.querySelectorAll('.item');
 const sliderAmount = slides.length-1;
 let currentCount = 0;
-
-
-const singleItemWidth = document.querySelector(".item").getBoundingClientRect().width;
-const wrapper = document.querySelector('.slide')
-const wrapperWidth = wrapper.getBoundingClientRect().width
-const singleStandardWidth = wrapperWidth / 3
-const differenceWidth = singleItemWidth - singleStandardWidth
-const doubleOffset =  singleStandardWidth * 2  - differenceWidth
+let singleItemWidth = document.querySelector(".item").getBoundingClientRect().width;
 
 const showImage = () => {
+    console.log(singleItemWidth)
+    const wrapper = document.querySelector('.slide')
+    const wrapperWidth = wrapper.getBoundingClientRect().width
+    const singleStandardWidth = wrapperWidth / 3
+    const differenceWidth = singleItemWidth - singleStandardWidth
+    const doubleOffset =  singleStandardWidth * 2  - differenceWidth
     let previousItem;
     let nextItem;
     let previousPrevious;
@@ -94,7 +93,8 @@ next.addEventListener("click", () => {
 });
 
 window.addEventListener('resize', function() {
-    console.log('Resizing')
+    singleItemWidth = document.querySelector('.item.active').getBoundingClientRect().width;
+    showImage();
 })
 
 showImage();
