@@ -3,15 +3,13 @@ const next = document.querySelector(".next");
 let slides = document.querySelectorAll('.item');
 const sliderAmount = slides.length-1;
 let currentCount = 0;
-let singleItemWidth = document.querySelector(".item").getBoundingClientRect().width;
+let singleStandardWidth;
 
 const showImage = () => {
-    console.log(singleItemWidth)
     const wrapper = document.querySelector('.slide')
     const wrapperWidth = wrapper.getBoundingClientRect().width
-    const singleStandardWidth = wrapperWidth / 3
-    const differenceWidth = singleItemWidth - singleStandardWidth
-    const doubleOffset =  singleStandardWidth * 2  - differenceWidth
+    singleStandardWidth = wrapperWidth / 3
+    const doubleOffset =  singleStandardWidth * 2
     let previousItem;
     let nextItem;
     let previousPrevious;
@@ -23,7 +21,6 @@ const showImage = () => {
         previousItem = slides.length-1;
     } else if(currentCount === slides.length-1) {
         nextItem = 0;
-        console.log(slides[0]);
     }
 
     nextNext = nextItem + 1;
@@ -66,8 +63,7 @@ const showImage = () => {
         }
     })
     if(currentCount === sliderAmount) {
-        const doubleWidth = singleItemWidth*2;
-        slides[0].style.transform = "translateX(" + doubleWidth + "px) scale(0.7)";
+        slides[0].style.transform = "translateX(" + doubleOffset + "px) scale(0.7)";
         slides[0].style.display = "block";
         slides[0].style.opacity = "0.5";
     }
@@ -93,7 +89,7 @@ next.addEventListener("click", () => {
 });
 
 window.addEventListener('resize', function() {
-    singleItemWidth = document.querySelector('.item.active').getBoundingClientRect().width;
+    singleStandardWidth = document.querySelector('.item.active').getBoundingClientRect().width;
     showImage();
 })
 
