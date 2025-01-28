@@ -14,14 +14,17 @@ div1.innerHTML = "Bitte füllen Sie alle Felder die mit einem * markiert sind! "
 div1.style.opacity = '1';
 
 
-
-document.querySelector(".btn-form-course").addEventListener("click", () => {
-    console.log('test');
-    /* history.back()*/
-    formCourse.style.display = "none";
-    btn.style.display = "block";
-    btnCourse.style.display = "block";
-})
+if(document.querySelector(".btn-form-course")) {
+    document.querySelector(".btn-form-course").addEventListener("click", () => {
+        console.log('test');
+        /* history.back()*/
+        formCourse.style.display = "none";
+        btn.style.display = "block";
+        if(btnCourse) {
+            btnCourse.style.display = "block";
+        }
+    })
+}
 
 
 showTabCourse(currentTabCourse);
@@ -37,7 +40,9 @@ const checkRadioButtonsCourse = (fieldset) => {
 }
 
 function showTabCourse(index) {
-    pageCourse[index].style.display = "block";
+    if(pageCourse.length > 0) {
+        pageCourse[index].style.display = "block";
+    }
     if (index === 0) {
         document.getElementById("prev").style.display = "none";
         document.querySelector(".btn-form-course").style.display = "block";

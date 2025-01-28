@@ -38,4 +38,7 @@
 
 <div class="menu-bottom">
     {{insert_article::155}}
+    <div class="archive">
+        <a href="">Archiv 2024</a>
+    </div>
 </div>

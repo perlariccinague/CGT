@@ -45,12 +45,12 @@
     justify-content: space-around;
     padding: 40px 0;
     align-items: center;
-    .ce_text {
+    .ce_text,.content-text {
       font: normal normal 400 18px/24px Open Sans;
       color: #BCBBBB;
       text-transform: uppercase;
     }
-    .ce_image {
+    .ce_image,.content-image {
       width: 200px;
     }
   }
@@ -92,7 +92,7 @@
   padding: 50px 0;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  .ce_text, .footer-middle-right{
+  .ce_text, .footer-middle-right, .content-text{
     width: 24%;
     color: white;
     text-align: center;
@@ -118,7 +118,7 @@
 }
 
 
-#footer .footer .partner-category .ce_text, .menu-bottom .partner-category .ce_text {
+#footer .footer .partner-category .ce_text, .menu-bottom .partner-category .ce_text, #footer .footer .partner-category .content-text, .menu-bottom .partner-category .content-text {
   height: 136px;
   position: relative;
 /*  width: 249px;*/
@@ -176,7 +176,7 @@
 .footer.weimar-block {
   .footer-middle {
     justify-content: center;
-    .ce_text {
+    .ce_text,.content-text {
       width: 40%;
       text-align: right;
       margin: 0 10px;
@@ -234,21 +234,21 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 120px 0 10px;
-    .ce_image {
+    .ce_image,.content-image {
       width: auto;
       margin: 15px auto;
     }
   }
   .footer-middle {
     padding: 20px 0;
-    .ce_text, .footer-middle-right  {
+    .ce_text, .footer-middle-right, .content-text  {
       width: 100%;
       margin: 15px auto;
     }
   }
 
   .footer.weimar-block .footer-middle {
-    .ce_text {
+    .ce_text,.content-text {
       width: 100%;
       margin: 15px auto;
       text-align: center;
@@ -265,7 +265,7 @@
   }
 
   #footer .footer .partner-category, .menu-bottom .partner-category {
-    .ce_text {
+    .ce_text,.content-text {
       width: 48%;
       height: 80px;
       margin-bottom: 10px;
@@ -277,7 +277,7 @@
         background-size: 100%;
       }
     }
-    .ce_image {
+    .ce_image,.content-image {
       margin-bottom: 10px;
     }
   }

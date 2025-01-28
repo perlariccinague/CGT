@@ -86,7 +86,7 @@
     margin-top: 40px;
     .nav_right {
       display: block;
-      .ce_text, .hyperlink_img {
+      .ce_text, .hyperlink_img, .content-text {
         position: relative;
         img {
           object-fit: cover;
@@ -153,11 +153,13 @@
         padding-bottom: 15px;
       }
     }
-    .ce_text {
-      display: flex;
-      justify-content: space-around;
+    .ce_text, .content-text {
       padding-left: 26px;
       font: normal normal normal 22px/40px Open Sans;
+      .rte {
+        display: flex;
+        justify-content: space-around;
+      }
       p {
         text-align: right;
         width: 45%;
@@ -253,7 +255,8 @@
 }
 
 
-.menu-Navigation .menu_block_wrapper .nav_left .ce_text.click p:last-child::after {
+.menu-Navigation .menu_block_wrapper .nav_left .ce_text.click p:last-child::after,
+.menu-Navigation .menu_block_wrapper .nav_left .content-text.click p:last-child::after {
   background: white;
 }
 
@@ -289,7 +292,7 @@
       }
       .nav_left {
         padding-bottom: 20px;
-        .ce_text {
+        .ce_text,.content-text {
           width: 100%;
           margin: 0 auto;
           padding-left: 0;

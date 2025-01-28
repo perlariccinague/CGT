@@ -18,21 +18,29 @@ let accompanied = true;
 btn.addEventListener('click', () => {
    form.style.display = "block";
     btn.style.display = "none";
-    btnCourse.style.display = "none";
+    if(btnCourse) {
+        btnCourse.style.display = "none";
+    }
 })
 
-btnCourse.addEventListener('click', () => {
-    formCourse.style.display = "block";
-    btnCourse.style.display = "none";
-    btn.style.display = "none";
-})
+if(btnCourse) {
+    btnCourse.addEventListener('click', () => {
+        formCourse.style.display = "block";
+        if(btnCourse) {
+            btnCourse.style.display = "none";
+        }
+        btn.style.display = "none";
+    })
+}
 
 document.querySelector(".btn-form").addEventListener("click", () => {
     console.log('test');
    /* history.back()*/
     form.style.display = "none";
     btn.style.display = "block";
-    btnCourse.style.display = "block";
+    if(btnCourse) {
+        btnCourse.style.display = "block";
+    }
 })
 
 
@@ -167,7 +175,7 @@ submitBtn.addEventListener("click", (e) => {
     } else {
         submitBtn.closest('form').submit();
     }
-    
+
 });
 
 const checkbox = document.querySelector(".yourBox");

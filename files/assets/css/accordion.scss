@@ -56,7 +56,7 @@
       }
     }
   }
-  .ce_text {
+  .ce_text,.content-text {
     padding: 30px 40px 70px;
     p {
       font: normal normal normal 20px/27px Open Sans;
@@ -83,7 +83,7 @@
         height: 30px;
       }
     }
-    .ce_text p {
+    .ce_text p,.content-text p {
       font: normal normal normal 20px/27px Open Sans;
     }
   }

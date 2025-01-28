@@ -10,7 +10,7 @@
       .finale-image-home {
         position: relative;
         height: 100%;
-        .image_container {
+        figure {
           height: 100%;
           img {
             height: 100%;
@@ -113,7 +113,7 @@
   color: $gelb;
   text-align: center;
   margin: 70px auto;
-  .ce_text {
+  .ce_text,.content-text {
     max-width: 700px;
     margin: 0 auto 50px;
     width: 80%;
@@ -142,7 +142,7 @@
     justify-content: space-between;
     width: 43%;
     flex-wrap: wrap;
-    .ce_text {
+    .ce_text,.content-text {
       width: 230px;
       text-align: right;
       p {
@@ -207,7 +207,7 @@
 
 .bg-teaser {
   background: $gray;
-  .ce_text {
+  .ce_text,.content-text {
     padding: 70px 0;
     margin: 0 auto;
     width: 90%;
@@ -227,7 +227,7 @@
 
 .without-bg {
   background: none;
-  .ce_text {
+  .ce_text,.content-text {
     text-align: center;
     color: black;
     h2 {
@@ -268,10 +268,10 @@
     &.partner-category-turnier .ce_image {
       width: 20%;
     }
-    .ce_image {
+    .ce_image,.content-image {
       margin: 15px 0;
     }
-    .ce_text {
+    .ce_text,.content-text {
       p {
         a {
           color: #fff;
@@ -321,7 +321,7 @@
       }
     }
   }
-  .ce_text p {
+  .ce_text p,.content-text p {
     margin: 30px auto;
     display: inline-block;
     padding-bottom: 30px;
@@ -523,11 +523,11 @@ div.infos-box:nth-child(7) {
   }
 }
 
-.results .ce_text h2 {
+.results .ce_text h2,.results .content-text h2 {
   width: 750px;
 }
 
-.ce_download {
+.ce_download,.content-download {
   text-align: center;
   background: #FFFFFF;
   box-shadow: 3px 3px 10px #00000029;
@@ -577,7 +577,7 @@ div.infos-box:nth-child(7) {
 #becoming-partner {
   height: auto;
   margin-bottom: 30px;
-  .ce_text {
+  .ce_text,.content-text {
     padding: 100px 0;
     text-align: center;
     color: white;
@@ -635,7 +635,7 @@ div.infos-box:nth-child(7) {
     z-index: 20;
     display: none;
   }
-  .ce_text {
+  .ce_text,.content-text {
     transform: translateY(-50%);
     top: 50%;
     z-index: 25;
@@ -662,7 +662,7 @@ div.infos-box:nth-child(7) {
 
 .imprint .privacy {
   margin: 50px auto;
-  .ce_text {
+  .ce_text,.content-text {
     padding-bottom: 75px;
     hr {
       border-color: $gelb;
@@ -795,7 +795,7 @@ div.infos-box:nth-child(7) {
 }
 
 .bg-teaser.without-bg {
-  .ce_player.block {
+  .ce_player.block,.content-player {
     width: 90%;
     margin:  0 auto;
     max-width: $content-width;
@@ -806,7 +806,7 @@ div.infos-box:nth-child(7) {
   }
 }
 
-.ce_youtube.block {
+.ce_youtube.block,.content-youtube {
   width: 90%;
   margin: 0 auto;
   max-width: 1083px;
@@ -826,7 +826,7 @@ div.infos-box:nth-child(7) {
       font: normal normal normal 20px/28px Open Sans;
     }
   }
-  .partner-block .partner-category.partner-category-turnier .ce_image {
+  .partner-block .partner-category.partner-category-turnier .ce_image,.partner-block .partner-category.partner-category-turnier .content-image {
     width: 25%;
    }
   }
@@ -878,14 +878,14 @@ div.infos-box:nth-child(7) {
     }
   }
 
-  .map .ce_text {
+  .map .ce_text,.map .content-text {
     margin: 0 auto;
   }
 
   .all-location {
     .location-left, .location-right {
       width: 100%;
-      .ce_text {
+      .ce_text,.content-text {
         width: auto;
         text-align: center;
         p {
@@ -904,7 +904,7 @@ div.infos-box:nth-child(7) {
 
   .map, .partner {
     margin: 50px auto;
-    .ce_text {
+    .ce_text,.content-text {
       h2 {
         font: normal normal normal 26px/36px Open Sans;
       }
@@ -941,11 +941,11 @@ div.infos-box:nth-child(7) {
     }
   }
 
-  .results .ce_text h2 {
+  .results .ce_text h2,.results .content-text h2 {
     width: 90%;
   }
 
-  #becoming-partner .ce_text {
+  #becoming-partner .ce_text, #becoming-partner .content-text{
     width: 90%;
     max-width: 100%;
     h2 {
@@ -1000,7 +1000,7 @@ div.infos-box:nth-child(7) {
 
   #container .bg-image {
     height: auto;
-    .ce_text {
+    .ce_text,.content-text {
       transform: translateY(0);
       top: 0;
       padding: 50px 0;
@@ -1013,7 +1013,7 @@ div.infos-box:nth-child(7) {
     }
   }
 
-  .imprint .privacy .ce_text {
+  .imprint .privacy .ce_text,.imprint .privacy .ce_text {
     padding-bottom: 40px;
     h2 {
       width: 90%;
@@ -1031,6 +1031,13 @@ div.infos-box:nth-child(7) {
       display: flex;
       justify-content: space-around;
       font: normal normal normal 22px/40px Open Sans;
+    }
+    .content-text .rte {
+      display: flex;
+      justify-content: space-around;
+      font: normal normal normal 22px/40px Open Sans;
+    }
+    .ce_text, .content-text {
       p {
         text-align: right;
         width: 65%;

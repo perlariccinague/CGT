@@ -19,13 +19,12 @@ const showImage = () => {
 
     if(currentCount === 0) {
         previousItem = slides.length-1;
-    } else if(currentCount === slides.length-1) {
+    } else if(currentCount === sliderAmount) {
         nextItem = 0;
     }
 
     nextNext = nextItem + 1;
     previousPrevious = previousItem - 1;
-
 
     if(previousItem === 0){
         previousPrevious = slides.length-1;
@@ -51,7 +50,6 @@ const showImage = () => {
             slide.style.opacity = '1';
             slide.classList.add("active");
         } else if(index === nextNext) {
-           //slide.style.transform = "translateX(" + singleItemWidth*2 + "px) scale(1)";
             slide.style.transform = "translateX(" + doubleOffset + "px) scale(1)";
             slide.style.transform = slide.style.transform.replace('(1)', '(0)');
             slide.classList.add("next-next");
