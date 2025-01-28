@@ -12,7 +12,7 @@
   .wittenbeck1, .fleesensee1, .leipzig1, .weimar1, .hösel1,
   .schloss1, .köln1, .seddiner1, .hardenberg1, .idstein1,
   .miltenberg1, .winston, .berlin1, .klingenburg1,
-  .lauterhofen1, .eschberg1, .machern1, .feldafing {
+  .lauterhofen1, .eschberg1, .machern1, .feldafing, .fleesensee, .kallin, .seddinger, .halle {
     position: absolute;
     transition: display 250ms;
     img {
@@ -50,7 +50,9 @@
 .winston:hover .white, .hardenberg1:hover .white,
 .idstein1:hover .white, .miltenberg1:hover .white, .feldafing:hover .white,
 .hösel1:hover .white, .berlin1:hover .white, .klingenburg1:hover .white,
-.lauterhofen1:hover .white, .eschberg1:hover .white, .machern1:hover .white {
+.lauterhofen1:hover .white, .eschberg1:hover .white, .machern1:hover .white, 
+.fleesensee:hover .white, .kallin:hover .white, .seddinger:hover .white,
+.halle:hover .white  {
   display: block;
 }
 
@@ -281,6 +283,35 @@
   }
 }
 
+.seddinger {
+  top: 393px;
+  right: 6%;
+  width: 150px;
+  height: 60px;
+  span {
+    right: 6px;
+  }
+}
+
+.kallin {
+  top: 393px;
+  right: 6%;
+  width: 150px;
+  height: 60px;
+  span {
+    right: 6px;
+  }
+}
+
+.halle {
+  top: 393px;
+  right: 6%;
+  width: 150px;
+  height: 60px;
+  span {
+    right: 6px;
+  }
+}
 
 
 .karte-image-mobile {
